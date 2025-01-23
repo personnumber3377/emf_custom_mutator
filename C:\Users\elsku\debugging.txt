@@ -31,3 +31,668 @@ Initiefewfwefweeeeeeeeeeeed mutator!!!
 Initiefewfwefweeeeeeeeeeeed mutator!!!
 Initiefewfwefweeeeeeeeeeeed mutator!!!
 Initiefewfwefweeeeeeeeeeeed mutator!!!
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4294967295)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967295)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 16), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 16)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 97)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 1)}, Remaining: 0 bytes>
+Mutating this field: (4, 1)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 528), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 528)
+Here is the mutation choice: add
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 0), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 85)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 612), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4160749567)}, Remaining: 0 bytes>
+Mutating this field: (4, 4160749567)
+Here is the mutation choice: add
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 4294967290), 'offPalEntries': (4, 612), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 20)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: add
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 4294967290), 'offPalEntries': (4, 612), 'SizeLast': (4, 4294967253)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967290)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4160749749)}, Remaining: 0 bytes>
+Mutating this field: (4, 4160749749)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 7), 'offPalEntries': (4, 612), 'SizeLast': (4, 4294967253)}, Remaining: 0 bytes>
+Mutating this field: (4, 612)
+Here is the mutation choice: left_shift
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 28)}, Remaining: 0 bytes>
+Mutating this field: (4, 28)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 7), 'offPalEntries': (4, 3355443200), 'SizeLast': (4, 4294967253)}, Remaining: 0 bytes>
+Mutating this field: (4, 7)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4162846901)}, Remaining: 0 bytes>
+Mutating this field: (4, 4162846901)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4162846666)}, Remaining: 0 bytes>
+Mutating this field: (4, 4162846666)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 3355443200), 'SizeLast': (4, 4294967253)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967253)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4162846682)}, Remaining: 0 bytes>
+Mutating this field: (4, 4162846682)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 3355443200), 'SizeLast': (4, 1)}, Remaining: 0 bytes>
+Mutating this field: (4, 3355443200)
+Here is the mutation choice: subtract
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Switching records.
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Switching records.
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4294967295)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967295)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4293918719)}, Remaining: 0 bytes>
+Mutating this field: (4, 4293918719)
+Here is the mutation choice: subtract
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 16), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 11141161)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 16), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 16)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 16400), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 20)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 16400), 'SizeLast': (4, 4194324)}, Remaining: 0 bytes>
+Mutating this field: (4, 4194324)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 16400), 'SizeLast': (4, 64)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: bit_flip
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 32), 'offPalEntries': (4, 16400), 'SizeLast': (4, 64)}, Remaining: 0 bytes>
+Mutating this field: (4, 64)
+Here is the mutation choice: left_shift
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 32), 'offPalEntries': (4, 16400), 'SizeLast': (4, 512)}, Remaining: 0 bytes>
+Mutating this field: (4, 32)
+Here is the mutation choice: left_shift
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 1)}, Remaining: 0 bytes>
+Mutating this field: (4, 1)
+Here is the mutation choice: bit_flip
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141289), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: left_shift
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 16400), 'SizeLast': (4, 512)}, Remaining: 0 bytes>
+Mutating this field: (4, 16400)
+Here is the mutation choice: right_shift
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 1), 'SizeLast': (4, 512)}, Remaining: 0 bytes>
+Mutating this field: (4, 1)
+Here is the mutation choice: subtract
+Switching records.
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4293918711)}, Remaining: 0 bytes>
+Mutating this field: (4, 4293918711)
+Here is the mutation choice: left_shift
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 4294967067), 'SizeLast': (4, 512)}, Remaining: 0 bytes>
+Mutating this field: (4, 512)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 536870913)}, Remaining: 0 bytes>
+Mutating this field: (4, 536870913)
+Here is the mutation choice: subtract
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141289), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: subtract
+Switching records.
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141289), 'xSrc': (4, 0), 'ySrc': (4, 4294967121), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (24, 84405977732342157929391748328867233792)
+Here is the mutation choice: add
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 536870699)}, Remaining: 0 bytes>
+Mutating this field: (4, 536870699)
+Here is the mutation choice: add
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 536870727)}, Remaining: 0 bytes>
+Mutating this field: (4, 536870727)
+Here is the mutation choice: add
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 4294967067), 'SizeLast': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4292870126)}, Remaining: 0 bytes>
+Mutating this field: (4, 4292870126)
+Here is the mutation choice: right_shift
+Switching records.
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 536870850)}, Remaining: 0 bytes>
+Mutating this field: (4, 536870850)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 1048063)}, Remaining: 0 bytes>
+Mutating this field: (4, 1048063)
+Here is the mutation choice: add
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 536870653)}, Remaining: 0 bytes>
+Mutating this field: (4, 536870653)
+Here is the mutation choice: add
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 1048294)}, Remaining: 0 bytes>
+Mutating this field: (4, 1048294)
+Here is the mutation choice: right_shift
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 4294967067), 'SizeLast': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: add
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 536870903)}, Remaining: 0 bytes>
+Mutating this field: (4, 536870903)
+Here is the mutation choice: bit_flip
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 469762039)}, Remaining: 0 bytes>
+Mutating this field: (4, 469762039)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 1)}, Remaining: 0 bytes>
+Mutating this field: (4, 1)
+Here is the mutation choice: subtract
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 4294967067), 'SizeLast': (4, 254)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967067)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 1)}, Remaining: 0 bytes>
+Mutating this field: (4, 1)
+Here is the mutation choice: add
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 11141161)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 16), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141289), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 248)}, Remaining: 0 bytes>
+Mutating this field: (4, 248)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 4294967148), 'offPalEntries': (4, 16), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967148)
+Here is the mutation choice: add
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 8440)}, Remaining: 0 bytes>
+Mutating this field: (4, 8440)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141289), 'xSrc': (4, 0), 'ySrc': (4, 4294967146), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: add
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 8374)}, Remaining: 0 bytes>
+Mutating this field: (4, 8374)
+Here is the mutation choice: right_shift
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4294967295)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967295)
+Here is the mutation choice: subtract
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 523)}, Remaining: 0 bytes>
+Mutating this field: (4, 523)
+Here is the mutation choice: right_shift
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: add
+Switching records.
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 193)}, Remaining: 0 bytes>
+Mutating this field: (4, 193)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4294967082)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967082)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4294966986)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294966986)
+Here is the mutation choice: add
+Switching records.
+Switching records.
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4294967192)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967192)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 2097345)}, Remaining: 0 bytes>
+Mutating this field: (4, 2097345)
+Here is the mutation choice: bit_flip
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 2097353)}, Remaining: 0 bytes>
+Mutating this field: (4, 2097353)
+Here is the mutation choice: add
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 222), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141289), 'xSrc': (4, 0), 'ySrc': (4, 4294967146), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: subtract
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 88), 'offPalEntries': (4, 16), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 16)
+Here is the mutation choice: add
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 222), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141289), 'xSrc': (4, 0), 'ySrc': (4, 4294967146), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 4294967262), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 11141289)
+Here is the mutation choice: left_shift
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 222), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 2852169984), 'xSrc': (4, 0), 'ySrc': (4, 4294967146), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 4294967262), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (16, 7605903603195604072277464842255)
+Here is the mutation choice: add
+Switching records.
+Switching records.
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842491), 'xDest': (4, 15), 'yDest': (4, 222), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 2852169984), 'xSrc': (4, 0), 'ySrc': (4, 4294967146), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 4294967262), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (24, 84405977732342157929391748328867233792)
+Here is the mutation choice: left_shift
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842491), 'xDest': (4, 15), 'yDest': (4, 222), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 2852169984), 'xSrc': (4, 0), 'ySrc': (4, 4294967146), 'XformSrc': (24, 691453769583346957757577202301353005678592), 'BkColorSrc': (4, 4294967262), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 222)
+Here is the mutation choice: right_shift
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 88), 'offPalEntries': (4, 29), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 20)
+Here is the mutation choice: left_shift
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 88), 'offPalEntries': (4, 29), 'SizeLast': (4, 20480)}, Remaining: 0 bytes>
+Mutating this field: (4, 88)
+Here is the mutation choice: right_shift
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 29), 'SizeLast': (4, 20480)}, Remaining: 0 bytes>
+Mutating this field: (4, 20480)
+Here is the mutation choice: bit_flip
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4294967120)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967120)
+Here is the mutation choice: add
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Switching records.
+Switching records.
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 16), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 16)
+Here is the mutation choice: right_shift
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 0), 'SizeLast': (4, 20)}, Remaining: 0 bytes>
+Mutating this field: (4, 20)
+Here is the mutation choice: left_shift
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Switching records.
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 4294967295)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967295)
+Here is the mutation choice: add
+Switching records.
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 1)}, Remaining: 0 bytes>
+Mutating this field: (4, 1)
+Here is the mutation choice: subtract
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 4294967160)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967160)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Switching records.
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 0), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 0), 'offPalEntries': (4, 0), 'SizeLast': (4, 5120)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: bit_flip
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 4294967278), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: left_shift
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 4294967278), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294967278)
+Here is the mutation choice: left_shift
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 4294962688), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294962688)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Switching records.
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 101)}, Remaining: 0 bytes>
+Mutating this field: (4, 101)
+Here is the mutation choice: right_shift
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: right_shift
+Switching records.
+Switching records.
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: add
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 28)}, Remaining: 20 bytes>
+No fields...
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 536870912), 'offPalEntries': (4, 0), 'SizeLast': (4, 5120)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: right_shift
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 255)}, Remaining: 0 bytes>
+Mutating this field: (4, 255)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 2147479040), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 0), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 536870912), 'offPalEntries': (4, 0), 'SizeLast': (4, 5120)}, Remaining: 0 bytes>
+Mutating this field: (4, 5120)
+Here is the mutation choice: add
+Mutating this record: <EMR_EOF {'Type': (4, 14), 'Size': (4, 20), 'nPalEntries': (4, 536870912), 'offPalEntries': (4, 0), 'SizeLast': (4, 5284)}, Remaining: 0 bytes>
+Mutating this field: (4, 5284)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 4294966951)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294966951)
+Here is the mutation choice: bit_flip
+Switching records.
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 153)}, Remaining: 0 bytes>
+Mutating this field: (4, 153)
+Here is the mutation choice: bit_flip
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Switching records.
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 3758096039)}, Remaining: 0 bytes>
+Mutating this field: (4, 3758096039)
+Here is the mutation choice: left_shift
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 155)}, Remaining: 0 bytes>
+Mutating this field: (4, 155)
+Here is the mutation choice: bit_flip
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 44)}, Remaining: 36 bytes>
+No fields...
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_COMMENT {'Type': (4, 70), 'Size': (4, 276)}, Remaining: 268 bytes>
+No fields...
+Mutating this record: <EMR_RESTOREDC {'Type': (4, 34), 'Size': (4, 12), 'SavedDC': (4, 65691)}, Remaining: 0 bytes>
+Mutating this field: (4, 65691)
+Here is the mutation choice: add
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 4294961776)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294961776)
+Here is the mutation choice: subtract
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 100), 'Bounds': (16, 7605903603195604072277464842255), 'xDest': (4, 15), 'yDest': (4, 2147479040), 'cxDest': (4, 85), 'cyDest': (4, 97), 'BitBltRasterOperation': (4, 11141161), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 0), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 4294967282), 'cbBmiSrc': (4, 0), 'offBitsSrc': (4, 0), 'cbBitsSrc': (4, 0)}, Remaining: 0 bytes>
+Mutating this field: (4, 0)
+Here is the mutation choice: bit_flip
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_SETICMMODE {'Type': (4, 98), 'Size': (4, 12), 'ICMMode': (4, 4294961733)}, Remaining: 0 bytes>
+Mutating this field: (4, 4294961733)
+Here is the mutation choice: add
+Switching records.
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Mutating this record: <EMR_SAVEDC {'Type': (4, 33), 'Size': (4, 8)}, Remaining: 0 bytes>
+No fields...

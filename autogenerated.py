@@ -51,6 +51,16 @@ class EMR_ALPHABLEND:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -131,6 +141,16 @@ class EMR_BITBLT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -211,6 +231,16 @@ class EMR_MASKBLT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -291,6 +321,16 @@ class EMR_PLGBLT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -371,6 +411,16 @@ class EMR_SETDIBITSTODEVICE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -451,6 +501,16 @@ class EMR_STRETCHBLT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -531,6 +591,16 @@ class EMR_STRETCHDIBITS:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -611,6 +681,16 @@ class EMR_TRANSPARENTBLT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -691,6 +771,16 @@ class EMR_EXCLUDECLIPRECT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -771,6 +861,16 @@ class EMR_EXTSELECTCLIPRGN:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -851,6 +951,16 @@ class EMR_INTERSECTCLIPRECT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -931,6 +1041,16 @@ class EMR_OFFSETCLIPRGN:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1011,6 +1131,16 @@ class EMR_SELECTCLIPPATH:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1091,6 +1221,16 @@ class EMR_COMMENT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1171,6 +1311,16 @@ class EMR_COMMENT_EMFPLUS:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1251,6 +1401,16 @@ class EMR_COMMENT_EMFSPOOL:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1331,6 +1491,16 @@ class EMR_EOF:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1411,6 +1581,16 @@ class EMR_ANGLEARC:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1491,6 +1671,16 @@ class EMR_ARC:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1571,6 +1761,16 @@ class EMR_ARCTO:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1651,6 +1851,16 @@ class EMR_CHORD:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1731,6 +1941,16 @@ class EMR_ELLIPSE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1811,6 +2031,16 @@ class EMR_EXTFLOODFILL:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1891,6 +2121,16 @@ class EMR_EXTTEXTOUTA:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -1971,6 +2211,16 @@ class EMR_EXTTEXTOUTW:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2051,6 +2301,16 @@ class EMR_FILLPATH:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2131,6 +2391,16 @@ class EMR_FILLRGN:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2211,6 +2481,16 @@ class EMR_FRAMERGN:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2291,6 +2571,16 @@ class EMR_GRADIENTFILL:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2371,6 +2661,16 @@ class EMR_LINETO:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2451,6 +2751,16 @@ class EMR_PAINTRGN:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2531,6 +2841,16 @@ class EMR_PIE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2611,6 +2931,16 @@ class EMR_POLYBEZIER:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2691,6 +3021,16 @@ class EMR_POLYBEZIER16:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2771,6 +3111,16 @@ class EMR_POLYBEZIERTO:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2851,6 +3201,16 @@ class EMR_POLYBEZIERTO16:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -2931,6 +3291,16 @@ class EMR_POLYDRAW:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3011,6 +3381,16 @@ class EMR_POLYDRAW16:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3091,6 +3471,16 @@ class EMR_POLYGON:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3171,6 +3561,16 @@ class EMR_POLYGON16:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3251,6 +3651,16 @@ class EMR_POLYLINE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3331,6 +3741,16 @@ class EMR_POLYLINE16:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3411,6 +3831,16 @@ class EMR_POLYLINETO:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3491,6 +3921,16 @@ class EMR_POLYLINETO16:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3571,6 +4011,16 @@ class EMR_POLYPOLYGON:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3651,6 +4101,16 @@ class EMR_POLYPOLYGON16:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3731,6 +4191,16 @@ class EMR_POLYPOLYLINE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3811,6 +4281,16 @@ class EMR_POLYPOLYLINE16:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3891,6 +4371,16 @@ class EMR_POLYTEXTOUTA:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -3971,6 +4461,16 @@ class EMR_POLYTEXTOUTW:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4051,6 +4551,16 @@ class EMR_RECTANGLE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4131,6 +4641,16 @@ class EMR_ROUNDRECT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4211,6 +4731,16 @@ class EMR_SETPIXELV:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4291,6 +4821,16 @@ class EMR_SMALLTEXTOUT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4371,6 +4911,16 @@ class EMR_STROKEANDFILLPATH:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4451,6 +5001,16 @@ class EMR_STROKEPATH:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4531,6 +5091,16 @@ class EMR_DRAWESCAPE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4611,6 +5181,16 @@ class EMR_EXTESCAPE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4691,6 +5271,16 @@ class EMR_NAMEDESCAPE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4771,6 +5361,16 @@ class EMR_CREATEBRUSHINDIRECT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4851,6 +5451,16 @@ class EMR_CREATECOLORSPACE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -4931,6 +5541,16 @@ class EMR_CREATECOLORSPACEW:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5011,6 +5631,16 @@ class EMR_CREATEDIBPATTERNBRUSHPT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5091,6 +5721,16 @@ class EMR_CREATEMONOBRUSH:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5171,6 +5811,16 @@ class EMR_CREATEPALETTE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5251,6 +5901,16 @@ class EMR_CREATEPEN:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5331,6 +5991,16 @@ class EMR_EXTCREATEFONTINDIRECTW:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5411,6 +6081,16 @@ class EMR_EXTCREATEPEN:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5491,6 +6171,16 @@ class EMR_COLORCORRECTPALETTE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5571,6 +6261,16 @@ class EMR_DELETECOLORSPACE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5651,6 +6351,16 @@ class EMR_DELETEOBJECT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5731,6 +6441,16 @@ class EMR_RESIZEPALETTE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5811,6 +6531,16 @@ class EMR_SELECTOBJECT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5891,6 +6621,16 @@ class EMR_SELECTPALETTE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -5971,6 +6711,16 @@ class EMR_SETCOLORSPACE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6051,6 +6801,16 @@ class EMR_SETPALETTEENTRIES:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6131,6 +6891,16 @@ class EMR_GLSBOUNDEDRECORD:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6211,6 +6981,16 @@ class EMR_GLSRECORD:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6291,6 +7071,16 @@ class EMR_COLORMATCHTOTARGETW:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6371,6 +7161,16 @@ class EMR_FORCEUFIMAPPING:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6451,6 +7251,16 @@ class EMR_INVERTRGN:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6531,6 +7341,16 @@ class EMR_MOVETOEX:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6611,6 +7431,16 @@ class EMR_PIXELFORMAT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6691,6 +7521,16 @@ class EMR_RESTOREDC:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6771,6 +7611,16 @@ class EMR_SCALEVIEWPORTEXTEX:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6851,6 +7701,16 @@ class EMR_SCALEWINDOWEXTEX:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -6931,6 +7791,16 @@ class EMR_SETARCDIRECTION:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7011,6 +7881,16 @@ class EMR_SETBKCOLOR:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7091,6 +7971,16 @@ class EMR_SETBKMODE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7171,6 +8061,16 @@ class EMR_SETBRUSHORGEX:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7251,6 +8151,16 @@ class EMR_SETCOLORADJUSTMENT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7331,6 +8241,16 @@ class EMR_SETICMMODE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7411,6 +8331,16 @@ class EMR_SETICMPROFILEA:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7491,6 +8421,16 @@ class EMR_SETICMPROFILEW:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7571,6 +8511,16 @@ class EMR_SETLAYOUT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7651,6 +8601,16 @@ class EMR_SETLINKEDUFIS:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7731,6 +8691,16 @@ class EMR_SETMAPMODE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7811,6 +8781,16 @@ class EMR_SETMAPPERFLAGS:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7891,6 +8871,16 @@ class EMR_SETMITERLIMIT:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -7971,6 +8961,16 @@ class EMR_SETPOLYFILLMODE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8051,6 +9051,16 @@ class EMR_SETROP2:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8131,6 +9141,16 @@ class EMR_SETSTRETCHBLTMODE:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8211,6 +9231,16 @@ class EMR_SETTEXTALIGN:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8291,6 +9321,16 @@ class EMR_SETTEXTCOLOR:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8371,6 +9411,16 @@ class EMR_SETTEXTJUSTIFICATION:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8451,6 +9501,16 @@ class EMR_SETVIEWPORTEXTEX:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8531,6 +9591,16 @@ class EMR_SETVIEWPORTORGEX:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8611,6 +9681,16 @@ class EMR_SETWINDOWEXTEX:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8691,6 +9771,16 @@ class EMR_SETWINDOWORGEX:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8771,6 +9861,16 @@ class EMR_MODIFYWORLDTRANSFORM:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):
@@ -8851,6 +9951,16 @@ class EMR_SETWORLDTRANSFORM:
             # Set the variable data.
             self.variable_data = self.remaining_data # The variable data should be the data at the end. This actually may be b"" for optional fields...
 
+    def mutable_fields(self) -> list:
+        # This method returns the fields which do NOT contain the type or size fields.
+        assert "Type" in self.fields
+        assert "Size" in self.fields
+        o = self.fields # Now try to do the thing.
+        o.remove("Type")
+        o.remove("Size")
+        assert "Type" not in self.fields
+        assert "Size" not in self.fields
+        return 0
 
     @classmethod
     def from_file(cls, filename):

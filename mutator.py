@@ -35,15 +35,35 @@ def modify_record(obj: EMFFile) -> None:
 	mut_field(rand_rec)
 	return
 
+'''
+def switch_fields(obj: EMFFile) -> None:
+	debugprint("Switching records.")
+	print("Switching records...")
+	if len(obj.records) < 2:
+		return # One or zero records.
+	r1 = random.randrange(len(obj.mutable_fields()))# random.choice(obj.records)
+	r2 = random.randrange(len(obj.mutable_fields()))# random.choice(obj.records)
+	assert len(obj.mutable_fields()) == len(obj.fields) + 2 # This should always match..
+	while r2 == r1: # Just pick a random one until be pick one which wasn't number two.
+		r2 = random.randrange(len(obj.records))
+	obj.fields[r1+2], obj.records[r2+2] = obj.records[r2+2], obj.records[r1+2] # Should swap the records. Plus two, because the first two are the type and size fields
+	return
+'''
+
+# self.records
+
 
 def switch_records(obj: EMFFile) -> None:
+	debugprint("Switching records.")
+	print("Switching records...")
 	if len(obj.records) < 2:
 		return # One or zero records.
 	r1 = random.randrange(len(obj.records))# random.choice(obj.records)
 	r2 = random.randrange(len(obj.records))# random.choice(obj.records)
+	# assert len(obj.mutable_fields()) == len(obj.fields) + 2 # This should always match..
 	while r2 == r1: # Just pick a random one until be pick one which wasn't number two.
 		r2 = random.randrange(len(obj.records))
-	obj.records[r1], obj.records[r2] = obj.records[r2], obj.records[r1] # Should swap the records.
+	obj.records[r1], obj.records[r2] = obj.records[r2], obj.records[r1] # Should swap the records. Plus two, because the first two are the type and size fields
 	return
 
 def mutate_emf_obj(obj: EMFFile) -> None: # This modifies the structure in place. This is basically needed to mutate the structure in structure-aware ways such that we exercise the deep logic of the program.
