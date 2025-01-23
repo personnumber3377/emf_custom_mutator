@@ -35,13 +35,27 @@ def modify_record(obj: EMFFile) -> None:
 	mut_field(rand_rec)
 	return
 
+
+def switch_records(obj: EMFFile) -> None:
+	if len(obj.records) < 2:
+		return # One or zero records.
+	r1 = random.randrange(len(obj.records))# random.choice(obj.records)
+	r2 = random.randrange(len(obj.records))# random.choice(obj.records)
+	while r2 == r1: # Just pick a random one until be pick one which wasn't number two.
+		r2 = random.randrange(len(obj.records))
+	obj.records[r1], obj.records[r2] = obj.records[r2], obj.records[r1] # Should swap the records.
+	return
+
 def mutate_emf_obj(obj: EMFFile) -> None: # This modifies the structure in place. This is basically needed to mutate the structure in structure-aware ways such that we exercise the deep logic of the program.
 	# Select mut strat.
-	mut_strat = random.randrange(1) # This should always be zero. This is just so we can add more strategies later on...
+	mut_strat = random.randrange(2) # This should always be zero. This is just so we can add more strategies later on...
 
 	if mut_strat == 0:
 		# Modify record.
 		modify_record(obj)
+	elif mut_strat == 1:
+		# Switch records.
+		switch_records(obj)
 	else:
 		print("Invalid mut strat")
 		assert False
