@@ -16,10 +16,7 @@ class ParsedHeader:
             unpacked.append(struct.unpack(f, data[:struct.calcsize(f)]))
             data = data[struct.calcsize(f):]
         fields = ['iType', 'nSize', 'rclBounds', 'rclFrame', 'dSignature', 'nVersion', 'nBytes', 'nRecords', 'nHandles', 'sReserved', 'nDescription', 'offDescription', 'nPalEntries', 'szlDevice', 'szlMillimeters', 'cbPixelFormat', 'offPixelFormat', 'bOpenGL', 'szlMicrometers']
-        print("unpacked: ")
-        print(unpacked)
         for field, value in zip(fields, unpacked):
-            print("value == "+str(value))
             if isinstance(value, tuple): # This is a multibyte value.
                 # Should be integers all
                 # Convert to unsigned bytes...
@@ -35,9 +32,8 @@ class ParsedHeader:
                 value = to_unsigned(value)
                 assert value >= 0 and value <= 255 
                 setattr(self, field, (1, value)) # Size of one byte
-        self.remaining_data = data[struct.calcsize("".join(self.format)):]
-        print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
-        # return self.remaining_data # Return the remaining data after reading the header.
+        # self.remaining_data = data[struct.calcsize("".join(self.format)):]
+        self.remaining_data = data
 
     @classmethod
     def from_file(cls, filename):

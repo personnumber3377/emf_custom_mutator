@@ -55,7 +55,7 @@ def switch_fields(obj: EMFFile) -> None:
 
 def switch_records(obj: EMFFile) -> None:
 	debugprint("Switching records.")
-	print("Switching records...")
+	#print("Switching records...")
 	if len(obj.records) < 2:
 		return # One or zero records.
 	r1 = random.randrange(len(obj.records))# random.choice(obj.records)
@@ -86,10 +86,10 @@ def mutate_emf(emf_data): # This is the main mutation function. Takes an EMF fil
 	# Now mutate the thing
 	mutate_emf_obj(emf_obj)
 	ser_bytes = emf_obj.serialize()
-	print("Serialized bytes: "+str(ser_bytes))
+	#print("Serialized bytes: "+str(ser_bytes))
 	# assert len(header_bytes) == 108 # This because the header is extension 2
 	ext_stuff = emf_obj.serialize_header() # Serialize the header.
-	print("Header seems to be the correct size...")
+	#print("Header seems to be the correct size...")
 	return ext_stuff + ser_bytes # Return the header + records which should be a(n atleast somewhat) valid EMF file. 
 
 
@@ -104,10 +104,6 @@ def fuzz(buf):
 	debugprint("Called theeeee mutator!!!!!")
 	assert isinstance(buf, bytes) # Should be a bytearray
 	orig_dat = copy.deepcopy(buf)
-	print("="*20)
-	print("Original data here:")
-	hexdump(orig_dat)
-	print("="*20)
 
 
 	debugprint("="*20)
@@ -140,10 +136,6 @@ def fuzz(buf):
 		debugprint("Returning the generic mutated data.")
 		return buf
 		# return orig_data
-	print("="*20)
-	print("After mutation:")
-	hexdump(buf)
-	print("="*20)
 
 	debugprint("="*20)
 	debugprint("After mutation:")

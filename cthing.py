@@ -1,7 +1,7 @@
 import re
 
 def gen_python_code(struct_format, fields):
-    fh = open("template.py", "r")
+    fh = open("header_template.py", "r")
     data = fh.read()
     fh.close()
     # 

@@ -42,9 +42,9 @@ class EMR_ALPHABLEND:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -84,9 +84,9 @@ class EMR_ALPHABLEND:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -132,9 +132,9 @@ class EMR_BITBLT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -174,9 +174,9 @@ class EMR_BITBLT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -222,9 +222,9 @@ class EMR_MASKBLT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -264,9 +264,9 @@ class EMR_MASKBLT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -312,9 +312,9 @@ class EMR_PLGBLT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -354,9 +354,9 @@ class EMR_PLGBLT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -402,9 +402,9 @@ class EMR_SETDIBITSTODEVICE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -444,9 +444,9 @@ class EMR_SETDIBITSTODEVICE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -492,9 +492,9 @@ class EMR_STRETCHBLT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -534,9 +534,9 @@ class EMR_STRETCHBLT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -582,9 +582,9 @@ class EMR_STRETCHDIBITS:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -624,9 +624,9 @@ class EMR_STRETCHDIBITS:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -672,9 +672,9 @@ class EMR_TRANSPARENTBLT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -714,9 +714,9 @@ class EMR_TRANSPARENTBLT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -762,9 +762,9 @@ class EMR_EXCLUDECLIPRECT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -804,9 +804,9 @@ class EMR_EXCLUDECLIPRECT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -852,9 +852,9 @@ class EMR_EXTSELECTCLIPRGN:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -894,9 +894,9 @@ class EMR_EXTSELECTCLIPRGN:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -942,9 +942,9 @@ class EMR_INTERSECTCLIPRECT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -984,9 +984,9 @@ class EMR_INTERSECTCLIPRECT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1032,9 +1032,9 @@ class EMR_OFFSETCLIPRGN:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1074,9 +1074,9 @@ class EMR_OFFSETCLIPRGN:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1122,9 +1122,9 @@ class EMR_SELECTCLIPPATH:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1164,9 +1164,9 @@ class EMR_SELECTCLIPPATH:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1212,9 +1212,9 @@ class EMR_COMMENT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1254,9 +1254,9 @@ class EMR_COMMENT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1302,9 +1302,9 @@ class EMR_COMMENT_EMFPLUS:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1344,9 +1344,9 @@ class EMR_COMMENT_EMFPLUS:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1392,9 +1392,9 @@ class EMR_COMMENT_EMFSPOOL:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1434,9 +1434,9 @@ class EMR_COMMENT_EMFSPOOL:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1482,9 +1482,9 @@ class EMR_EOF:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1524,9 +1524,9 @@ class EMR_EOF:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1572,9 +1572,9 @@ class EMR_ANGLEARC:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1614,9 +1614,9 @@ class EMR_ANGLEARC:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1662,9 +1662,9 @@ class EMR_ARC:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1704,9 +1704,9 @@ class EMR_ARC:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1752,9 +1752,9 @@ class EMR_ARCTO:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1794,9 +1794,9 @@ class EMR_ARCTO:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1842,9 +1842,9 @@ class EMR_CHORD:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1884,9 +1884,9 @@ class EMR_CHORD:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -1932,9 +1932,9 @@ class EMR_ELLIPSE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -1974,9 +1974,9 @@ class EMR_ELLIPSE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2022,9 +2022,9 @@ class EMR_EXTFLOODFILL:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2064,9 +2064,9 @@ class EMR_EXTFLOODFILL:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2112,9 +2112,9 @@ class EMR_EXTTEXTOUTA:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2154,9 +2154,9 @@ class EMR_EXTTEXTOUTA:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2202,9 +2202,9 @@ class EMR_EXTTEXTOUTW:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2244,9 +2244,9 @@ class EMR_EXTTEXTOUTW:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2292,9 +2292,9 @@ class EMR_FILLPATH:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2334,9 +2334,9 @@ class EMR_FILLPATH:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2382,9 +2382,9 @@ class EMR_FILLRGN:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2424,9 +2424,9 @@ class EMR_FILLRGN:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2472,9 +2472,9 @@ class EMR_FRAMERGN:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2514,9 +2514,9 @@ class EMR_FRAMERGN:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2562,9 +2562,9 @@ class EMR_GRADIENTFILL:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2604,9 +2604,9 @@ class EMR_GRADIENTFILL:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2652,9 +2652,9 @@ class EMR_LINETO:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2694,9 +2694,9 @@ class EMR_LINETO:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2742,9 +2742,9 @@ class EMR_PAINTRGN:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2784,9 +2784,9 @@ class EMR_PAINTRGN:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2832,9 +2832,9 @@ class EMR_PIE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2874,9 +2874,9 @@ class EMR_PIE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -2922,9 +2922,9 @@ class EMR_POLYBEZIER:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -2964,9 +2964,9 @@ class EMR_POLYBEZIER:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3012,9 +3012,9 @@ class EMR_POLYBEZIER16:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3054,9 +3054,9 @@ class EMR_POLYBEZIER16:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3102,9 +3102,9 @@ class EMR_POLYBEZIERTO:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3144,9 +3144,9 @@ class EMR_POLYBEZIERTO:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3192,9 +3192,9 @@ class EMR_POLYBEZIERTO16:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3234,9 +3234,9 @@ class EMR_POLYBEZIERTO16:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3282,9 +3282,9 @@ class EMR_POLYDRAW:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3324,9 +3324,9 @@ class EMR_POLYDRAW:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3372,9 +3372,9 @@ class EMR_POLYDRAW16:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3414,9 +3414,9 @@ class EMR_POLYDRAW16:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3462,9 +3462,9 @@ class EMR_POLYGON:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3504,9 +3504,9 @@ class EMR_POLYGON:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3552,9 +3552,9 @@ class EMR_POLYGON16:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3594,9 +3594,9 @@ class EMR_POLYGON16:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3642,9 +3642,9 @@ class EMR_POLYLINE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3684,9 +3684,9 @@ class EMR_POLYLINE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3732,9 +3732,9 @@ class EMR_POLYLINE16:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3774,9 +3774,9 @@ class EMR_POLYLINE16:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3822,9 +3822,9 @@ class EMR_POLYLINETO:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3864,9 +3864,9 @@ class EMR_POLYLINETO:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -3912,9 +3912,9 @@ class EMR_POLYLINETO16:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -3954,9 +3954,9 @@ class EMR_POLYLINETO16:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4002,9 +4002,9 @@ class EMR_POLYPOLYGON:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4044,9 +4044,9 @@ class EMR_POLYPOLYGON:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4092,9 +4092,9 @@ class EMR_POLYPOLYGON16:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4134,9 +4134,9 @@ class EMR_POLYPOLYGON16:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4182,9 +4182,9 @@ class EMR_POLYPOLYLINE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4224,9 +4224,9 @@ class EMR_POLYPOLYLINE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4272,9 +4272,9 @@ class EMR_POLYPOLYLINE16:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4314,9 +4314,9 @@ class EMR_POLYPOLYLINE16:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4362,9 +4362,9 @@ class EMR_POLYTEXTOUTA:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4404,9 +4404,9 @@ class EMR_POLYTEXTOUTA:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4452,9 +4452,9 @@ class EMR_POLYTEXTOUTW:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4494,9 +4494,9 @@ class EMR_POLYTEXTOUTW:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4542,9 +4542,9 @@ class EMR_RECTANGLE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4584,9 +4584,9 @@ class EMR_RECTANGLE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4632,9 +4632,9 @@ class EMR_ROUNDRECT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4674,9 +4674,9 @@ class EMR_ROUNDRECT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4722,9 +4722,9 @@ class EMR_SETPIXELV:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4764,9 +4764,9 @@ class EMR_SETPIXELV:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4812,9 +4812,9 @@ class EMR_SMALLTEXTOUT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4854,9 +4854,9 @@ class EMR_SMALLTEXTOUT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4902,9 +4902,9 @@ class EMR_STROKEANDFILLPATH:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -4944,9 +4944,9 @@ class EMR_STROKEANDFILLPATH:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -4992,9 +4992,9 @@ class EMR_STROKEPATH:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5034,9 +5034,9 @@ class EMR_STROKEPATH:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5082,9 +5082,9 @@ class EMR_DRAWESCAPE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5124,9 +5124,9 @@ class EMR_DRAWESCAPE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5172,9 +5172,9 @@ class EMR_EXTESCAPE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5214,9 +5214,9 @@ class EMR_EXTESCAPE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5262,9 +5262,9 @@ class EMR_NAMEDESCAPE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5304,9 +5304,9 @@ class EMR_NAMEDESCAPE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5352,9 +5352,9 @@ class EMR_CREATEBRUSHINDIRECT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5394,9 +5394,9 @@ class EMR_CREATEBRUSHINDIRECT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5442,9 +5442,9 @@ class EMR_CREATECOLORSPACE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5484,9 +5484,9 @@ class EMR_CREATECOLORSPACE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5532,9 +5532,9 @@ class EMR_CREATECOLORSPACEW:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5574,9 +5574,9 @@ class EMR_CREATECOLORSPACEW:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5622,9 +5622,9 @@ class EMR_CREATEDIBPATTERNBRUSHPT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5664,9 +5664,9 @@ class EMR_CREATEDIBPATTERNBRUSHPT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5712,9 +5712,9 @@ class EMR_CREATEMONOBRUSH:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5754,9 +5754,9 @@ class EMR_CREATEMONOBRUSH:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5802,9 +5802,9 @@ class EMR_CREATEPALETTE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5844,9 +5844,9 @@ class EMR_CREATEPALETTE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5892,9 +5892,9 @@ class EMR_CREATEPEN:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -5934,9 +5934,9 @@ class EMR_CREATEPEN:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -5982,9 +5982,9 @@ class EMR_EXTCREATEFONTINDIRECTW:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6024,9 +6024,9 @@ class EMR_EXTCREATEFONTINDIRECTW:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6072,9 +6072,9 @@ class EMR_EXTCREATEPEN:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6114,9 +6114,9 @@ class EMR_EXTCREATEPEN:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6162,9 +6162,9 @@ class EMR_COLORCORRECTPALETTE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6204,9 +6204,9 @@ class EMR_COLORCORRECTPALETTE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6252,9 +6252,9 @@ class EMR_DELETECOLORSPACE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6294,9 +6294,9 @@ class EMR_DELETECOLORSPACE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6342,9 +6342,9 @@ class EMR_DELETEOBJECT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6384,9 +6384,9 @@ class EMR_DELETEOBJECT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6432,9 +6432,9 @@ class EMR_RESIZEPALETTE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6474,9 +6474,9 @@ class EMR_RESIZEPALETTE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6522,9 +6522,9 @@ class EMR_SELECTOBJECT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6564,9 +6564,9 @@ class EMR_SELECTOBJECT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6612,9 +6612,9 @@ class EMR_SELECTPALETTE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6654,9 +6654,9 @@ class EMR_SELECTPALETTE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6702,9 +6702,9 @@ class EMR_SETCOLORSPACE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6744,9 +6744,9 @@ class EMR_SETCOLORSPACE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6792,9 +6792,9 @@ class EMR_SETPALETTEENTRIES:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6834,9 +6834,9 @@ class EMR_SETPALETTEENTRIES:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6882,9 +6882,9 @@ class EMR_GLSBOUNDEDRECORD:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -6924,9 +6924,9 @@ class EMR_GLSBOUNDEDRECORD:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -6972,9 +6972,9 @@ class EMR_GLSRECORD:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7014,9 +7014,9 @@ class EMR_GLSRECORD:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7062,9 +7062,9 @@ class EMR_COLORMATCHTOTARGETW:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7104,9 +7104,9 @@ class EMR_COLORMATCHTOTARGETW:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7152,9 +7152,9 @@ class EMR_FORCEUFIMAPPING:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7194,9 +7194,9 @@ class EMR_FORCEUFIMAPPING:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7242,9 +7242,9 @@ class EMR_INVERTRGN:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7284,9 +7284,9 @@ class EMR_INVERTRGN:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7332,9 +7332,9 @@ class EMR_MOVETOEX:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7374,9 +7374,9 @@ class EMR_MOVETOEX:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7422,9 +7422,9 @@ class EMR_PIXELFORMAT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7464,9 +7464,9 @@ class EMR_PIXELFORMAT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7512,9 +7512,9 @@ class EMR_RESTOREDC:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7554,9 +7554,9 @@ class EMR_RESTOREDC:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7602,9 +7602,9 @@ class EMR_SCALEVIEWPORTEXTEX:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7644,9 +7644,9 @@ class EMR_SCALEVIEWPORTEXTEX:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7692,9 +7692,9 @@ class EMR_SCALEWINDOWEXTEX:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7734,9 +7734,9 @@ class EMR_SCALEWINDOWEXTEX:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7782,9 +7782,9 @@ class EMR_SETARCDIRECTION:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7824,9 +7824,9 @@ class EMR_SETARCDIRECTION:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7872,9 +7872,9 @@ class EMR_SETBKCOLOR:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -7914,9 +7914,9 @@ class EMR_SETBKCOLOR:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -7962,9 +7962,9 @@ class EMR_SETBKMODE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8004,9 +8004,9 @@ class EMR_SETBKMODE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8052,9 +8052,9 @@ class EMR_SETBRUSHORGEX:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8094,9 +8094,9 @@ class EMR_SETBRUSHORGEX:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8142,9 +8142,9 @@ class EMR_SETCOLORADJUSTMENT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8184,9 +8184,9 @@ class EMR_SETCOLORADJUSTMENT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8232,9 +8232,9 @@ class EMR_SETICMMODE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8274,9 +8274,9 @@ class EMR_SETICMMODE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8322,9 +8322,9 @@ class EMR_SETICMPROFILEA:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8364,9 +8364,9 @@ class EMR_SETICMPROFILEA:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8412,9 +8412,9 @@ class EMR_SETICMPROFILEW:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8454,9 +8454,9 @@ class EMR_SETICMPROFILEW:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8502,9 +8502,9 @@ class EMR_SETLAYOUT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8544,9 +8544,9 @@ class EMR_SETLAYOUT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8592,9 +8592,9 @@ class EMR_SETLINKEDUFIS:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8634,9 +8634,9 @@ class EMR_SETLINKEDUFIS:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8682,9 +8682,9 @@ class EMR_SETMAPMODE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8724,9 +8724,9 @@ class EMR_SETMAPMODE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8772,9 +8772,9 @@ class EMR_SETMAPPERFLAGS:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8814,9 +8814,9 @@ class EMR_SETMAPPERFLAGS:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8862,9 +8862,9 @@ class EMR_SETMITERLIMIT:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8904,9 +8904,9 @@ class EMR_SETMITERLIMIT:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -8952,9 +8952,9 @@ class EMR_SETPOLYFILLMODE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -8994,9 +8994,9 @@ class EMR_SETPOLYFILLMODE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9042,9 +9042,9 @@ class EMR_SETROP2:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9084,9 +9084,9 @@ class EMR_SETROP2:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9132,9 +9132,9 @@ class EMR_SETSTRETCHBLTMODE:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9174,9 +9174,9 @@ class EMR_SETSTRETCHBLTMODE:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9222,9 +9222,9 @@ class EMR_SETTEXTALIGN:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9264,9 +9264,9 @@ class EMR_SETTEXTALIGN:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9312,9 +9312,9 @@ class EMR_SETTEXTCOLOR:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9354,9 +9354,9 @@ class EMR_SETTEXTCOLOR:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9402,9 +9402,9 @@ class EMR_SETTEXTJUSTIFICATION:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9444,9 +9444,9 @@ class EMR_SETTEXTJUSTIFICATION:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9492,9 +9492,9 @@ class EMR_SETVIEWPORTEXTEX:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9534,9 +9534,9 @@ class EMR_SETVIEWPORTEXTEX:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9582,9 +9582,9 @@ class EMR_SETVIEWPORTORGEX:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9624,9 +9624,9 @@ class EMR_SETVIEWPORTORGEX:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9672,9 +9672,9 @@ class EMR_SETWINDOWEXTEX:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9714,9 +9714,9 @@ class EMR_SETWINDOWEXTEX:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9762,9 +9762,9 @@ class EMR_SETWINDOWORGEX:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9804,9 +9804,9 @@ class EMR_SETWINDOWORGEX:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9852,9 +9852,9 @@ class EMR_MODIFYWORLDTRANSFORM:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9894,9 +9894,9 @@ class EMR_MODIFYWORLDTRANSFORM:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data
@@ -9942,9 +9942,9 @@ class EMR_SETWORLDTRANSFORM:
         #print("Here is the size thing: "+str(struct.calcsize("".join(self.format))))
         # return self.remaining_data # Return the remaining data after reading the header.
         # Sanity checking. If the record doesn't have variable fields, then all of the data should be consumed. Otherwise this is an error condition.
-        print("Here is self.name: "+str(self.name))
-        print("Here is self.has_variable: "+str(self.has_variable))
-        print("Here is self.remaining_data: "+str(self.remaining_data))
+        #print("Here is self.name: "+str(self.name))
+        #print("Here is self.has_variable: "+str(self.has_variable))
+        #print("Here is self.remaining_data: "+str(self.remaining_data))
         if not self.has_variable and self.remaining_data: # There is left over data even though record should not be variable.
             assert False
         if self.has_variable:
@@ -9984,9 +9984,9 @@ class EMR_SETWORLDTRANSFORM:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        if self.variable_data:
-            print("Length of variable data: "+str(len(self.variable_data)))
-            print("Variable data: "+str(self.variable_data))
+        #if self.variable_data:
+        #    print("Length of variable data: "+str(len(self.variable_data)))
+        #    print("Variable data: "+str(self.variable_data))
         if self.has_variable:
             # Add variable data to the end.
             out += self.variable_data

@@ -23,10 +23,10 @@ def multiply_substring(string: str) -> str:
 def add_character(string: bytes) -> str:
 	#if len(string)-1 >= 1:
 	if not string:
-		print("oof")
+		#print("oof")
 		return bytes([random.randrange(0,256)])
 	where_to_place = random.randrange(max(len(string)-1, 1))
-	print("oof")
+	#print("oof")
 	return string[:where_to_place] + bytes([random.randrange(0,256)]) + string[where_to_place:]
 
 def mutate_generic(string: bytes) -> str: # Mutate a string.

@@ -8,14 +8,14 @@ def to_unsigned(byte_integer: int) -> int: # Converts a signed integer in a sing
     return byte_integer
 
 class ParsedHeader:
-    format = ['4b', '4b', '16b', '16b', '4b', '4b', '4b', '4b', '2b', '2b', '4b', '4b', '4b', '8b', '8b']
+    format = STRUCT_FORMAT
 
     def __init__(self, data):
         unpacked = []
         for f in self.format:
             unpacked.append(struct.unpack(f, data[:struct.calcsize(f)]))
             data = data[struct.calcsize(f):]
-        fields = ['iType', 'nSize', 'rclBounds', 'rclFrame', 'dSignature', 'nVersion', 'nBytes', 'nRecords', 'nHandles', 'sReserved', 'nDescription', 'offDescription', 'nPalEntries', 'szlDevice', 'szlMillimeters']
+        fields = FIELDS
         for field, value in zip(fields, unpacked):
             if isinstance(value, tuple): # This is a multibyte value.
                 # Should be integers all
@@ -42,12 +42,12 @@ class ParsedHeader:
             return cls(data)
 
     def __repr__(self):
-        fields = ['iType', 'nSize', 'rclBounds', 'rclFrame', 'dSignature', 'nVersion', 'nBytes', 'nRecords', 'nHandles', 'sReserved', 'nDescription', 'offDescription', 'nPalEntries', 'szlDevice', 'szlMillimeters']
+        fields = FIELDS
         parsed_fields = {field: getattr(self, field) for field in fields}
         return f"<ParsedHeader {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
 
     def serialize(self):
-        fields = ['iType', 'nSize', 'rclBounds', 'rclFrame', 'dSignature', 'nVersion', 'nBytes', 'nRecords', 'nHandles', 'sReserved', 'nDescription', 'offDescription', 'nPalEntries', 'szlDevice', 'szlMillimeters'] # These are the fields of this object.
+        fields = FIELDS # These are the fields of this object.
         out = b"" # Initialize empty bytes output
         for i, format_string in enumerate(self.format):
             # The corresponding field is fields[i]
@@ -60,4 +60,3 @@ class ParsedHeader:
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
         return out # Return the output bytes
-
