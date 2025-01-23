@@ -1,6 +1,6 @@
 
 import random
-
+from debug import *
 
 def mutate_integer(value: int, n: int) -> int: # Thanks ChatGPT!!!
 	"""Randomly mutates an integer while ensuring it fits within n bytes.
@@ -13,6 +13,7 @@ def mutate_integer(value: int, n: int) -> int: # Thanks ChatGPT!!!
 		int: The mutated integer.
 	"""
 	if n <= 0:
+		assert False
 		raise ValueError("Number of bytes (n) must be positive.")
 	
 	# Maximum value that fits in n bytes
@@ -20,7 +21,7 @@ def mutate_integer(value: int, n: int) -> int: # Thanks ChatGPT!!!
 
 	# Choose a random mutation
 	mutation = random.choice(["left_shift", "right_shift", "bit_flip", "add", "subtract"])
-
+	debugprint("Here is the mutation choice: "+str(mutation))
 	if mutation == "left_shift":
 		shift = random.randint(1, n * 8 - 1)  # Shift amount
 		value = (value << shift) & max_value  # Ensure it fits in n bytes

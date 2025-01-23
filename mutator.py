@@ -6,6 +6,7 @@ import random
 from value_mut import * # This is for the actual mutation strategies. This implements mutate_tuple
 import copy
 import generic_mutator_bytes # This is for the generic mutation shit.
+from debug import *
 
 def mut_field(rec) -> None:
 	# Mutates a field in a record.
@@ -15,11 +16,13 @@ def mut_field(rec) -> None:
 	available_fields.remove("Type")
 	available_fields.remove("Size")
 	if not available_fields: # Record only has the "Type" and "Size" fields.
+		debugprint("No fields...")
 		return
 	field = random.choice(available_fields)
 	assert isinstance(field, str) # Should be string...
 	field_tup = getattr(rec, field) # Get the actual attribute thing...
 	# Now just do the thing...
+	debugprint("Mutating this field: "+str(field_tup))
 	field_tup = mutate_tuple(field_tup)
 	# Now set the mutated value to the object.
 	setattr(rec, field, field_tup)
@@ -28,6 +31,7 @@ def mut_field(rec) -> None:
 def modify_record(obj: EMFFile) -> None:
 	rand_rec = random.choice(obj.records) # Just take some record from the object.
 	# Now try to modify the stuff.
+	debugprint("Mutating this record: "+str(rand_rec))
 	mut_field(rand_rec)
 	return
 
@@ -60,56 +64,6 @@ def init(seed):
 	pass
 
 
-def debugprint(string):
-	fh = open("C:\\Users\\elsku\\debugging.txt", "a")
-	fh.write(string)
-	fh.write("\n")
-	fh.close()
-	return
-
-
-# def fuzz(buf, add_buf, max_size):
-#def fuzz(buf, buf_size):
-
-def hexdump(data: bytes, group_size=1, bytes_per_line=16): # Thanks ChatGPT
-	offset = 0
-	for i in range(0, len(data), bytes_per_line):
-		# Slice a line of bytes
-		line = data[i:i + bytes_per_line]
-		
-		# Format the offset as a 6-character hex value
-		offset_str = f"{offset:08x}"
-		
-		# Create a hexdump line with grouped bytes
-		hex_bytes = " ".join(f"{byte:02x}" for byte in line)
-		
-		# Add the ASCII representation
-		ascii_bytes = "".join(chr(byte) if 32 <= byte <= 126 else "." for byte in line)
-		
-		# Print the full line
-		print(f"{offset_str}: {hex_bytes:<{3 * bytes_per_line}} {ascii_bytes}")
-		offset += bytes_per_line
-
-
-# debugprint
-def hexdumpdebug(data: bytes, group_size=1, bytes_per_line=16): # Thanks ChatGPT
-	offset = 0
-	for i in range(0, len(data), bytes_per_line):
-		# Slice a line of bytes
-		line = data[i:i + bytes_per_line]
-		
-		# Format the offset as a 6-character hex value
-		offset_str = f"{offset:08x}"
-		
-		# Create a hexdump line with grouped bytes
-		hex_bytes = " ".join(f"{byte:02x}" for byte in line)
-		
-		# Add the ASCII representation
-		ascii_bytes = "".join(chr(byte) if 32 <= byte <= 126 else "." for byte in line)
-		
-		# Print the full line
-		debugprint(f"{offset_str}: {hex_bytes:<{3 * bytes_per_line}} {ascii_bytes}")
-		offset += bytes_per_line
 
 
 def fuzz(buf):
@@ -136,6 +90,13 @@ def fuzz(buf):
 	try:
 		buf = mutate_emf(buf) # Mutate the EMF file...
 		if buf == orig_data: # Mutate generic.
+			debugprint("The mutated data was the same!!!")
+		else:
+			# Wasn not the same
+			debugprint("The mutated data was NOT the same!!!")
+		return buf
+		if buf == orig_data: # Mutate generic.
+			debugprint("The mutated data was the same!!!")
 			return generic_mutator_bytes.mutate_generic(buf)
 	except:
 		debugprint("EMF mutation failed!!!!! Falling back to generic mutator!")
@@ -144,6 +105,7 @@ def fuzz(buf):
 		debugprint("Type of buffer after: "+str(type(buf)))
 		debugprint("Returning the generic mutated data.")
 		return buf
+		# return orig_data
 	print("="*20)
 	print("After mutation:")
 	hexdump(buf)
@@ -179,8 +141,14 @@ def test_mut():
 	# Now try to parse the records
 	# records = parse_records(rest_of_data) # Try to parse the records from the data.
 	for _ in range(TEST_MUT_COUNT):
-		orig_data = copy.deepcopy()
+		orig_data2 = copy.deepcopy(data)
 		data = mutate_emf(data)
+		if data == orig_data:
+			print("Mutated data was the same as original.")
+			assert False
+
+		else:
+			print("Data was different!")
 
 	return
 
