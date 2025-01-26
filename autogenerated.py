@@ -6031,6 +6031,7 @@ class EMR_EXTCREATEFONTINDIRECTW:
             # Add variable data to the end.
             out += self.variable_data
         # Sanity checking. The "Size" field should actually match the size upon serialization. If not, then the mutator did not take care of the size correctly and there is a bug in the mutator.
+        print("Here is the size thing: "+str(self.Size[1])+", "+str(len(out)))
         assert self.Size[1] == len(out)
         return out # Return the output bytes
 

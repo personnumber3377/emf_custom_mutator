@@ -41,22 +41,30 @@ def mut_field(rec) -> None:
 def mutate_extra_data(record) -> None: # This function mutates extra data in 
 	print("mutating this record: "+str(record))
 	assert record.has_variable
-
-	orig_data = copy.deepcopy(record.remaining_data)
+	print("Serializing thing...")
+	record.serialize()
+	print("Done!")
+	orig_data = copy.deepcopy(record.variable_data)
 	orig_len = len(orig_data)
 	new_data = generic_mutator_bytes.mutate_generic(orig_data) # Call the generic byte mutator
 	# Now try to fix up the length field such that it works
-	diff = len(new_data) - orig_len # Difference
+	diff = len(new_data) - len(record.variable_data) # Difference
+	assert len(record.variable_data) + diff == len(new_data)
 	# Set the values
-	record.remaining_data = new_data
+	record.variable_data = copy.deepcopy(new_data)
 	assert hasattr(record, 'Size') # Should have the size stuff
 	#record.Size[1] += diff # # TypeerROr: 'tuple' ObjeCT dOes nOT sUpport iTEm assIgnmenT
+	print("Diff: "+str(diff))
+	print("Size before setting: "+str(record.Size))
 	record.Size = (record.Size[0], record.Size[1] + diff) # Add like this???
+	print("Size after setting: "+str(record.Size))
+	# Double check..
+	assert len(record.serialize()) == record.Size[1]
 	# record.Size
 	print("New mutated record: "+str(record))
 	return
 
-def generate_random_record(obj: EMFFile) -> None: # Generates a random record for this EMF file.
+def add_random_record(obj: EMFFile) -> None: # Generates a random record for this EMF file and appends it somewhere in the file.
 	# Lookup a random record type.
 	# If you look at https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-emf/1eec80ba-799b-4784-a9ac-91597d590ae1 the maximum record type is 0x7a .
 
@@ -150,7 +158,7 @@ def shuffle_records(obj: EMFFile) -> None:
 
 def mutate_emf_obj(obj: EMFFile) -> None: # This modifies the structure in place. This is basically needed to mutate the structure in structure-aware ways such that we exercise the deep logic of the program.
 	# Select mut strat.
-	mut_strat = random.randrange(3) # This should always be zero. This is just so we can add more strategies later on...
+	mut_strat = random.randrange(4) # This should always be zero. This is just so we can add more strategies later on...
 
 	if mut_strat == 0:
 		# Modify record.
@@ -161,6 +169,8 @@ def mutate_emf_obj(obj: EMFFile) -> None: # This modifies the structure in place
 	elif mut_strat == 2:
 		shuffle_records(obj)
 		# Try to modify the extra data
+	elif mut_strat == 3: # Add a random, but valid record somewhere in the file.
+		add_random_record(obj)
 	else:
 		print("Invalid mut strat")
 		assert False
@@ -170,6 +180,8 @@ def mutate_emf(emf_data): # This is the main mutation function. Takes an EMF fil
 	emf_obj = parse_emf_file(emf_data)
 	# Now mutate the thing
 	mutate_emf_obj(emf_obj)
+	# Fixup the header.
+	fixup_header(emf_obj)
 	ser_bytes = emf_obj.serialize()
 	#print("Serialized bytes: "+str(ser_bytes))
 	# assert len(header_bytes) == 108 # This because the header is extension 2
@@ -183,20 +195,28 @@ def init(seed):
 	pass
 
 
+def fixup_header(obj: EMFFile) -> None: # This fixes the header of the object such that the structure is actually valid EMF.
+	# fields = ['iType', 'nSize', 'rclBounds', 'rclFrame', 'dSignature', 'nVersion', 'nBytes', 'nRecords', 'nHandles', 'sReserved', 'nDescription', 'offDescription', 'nPalEntries', 'szlDevice', 'szlMillimeters', 'cbPixelFormat', 'offPixelFormat', 'bOpenGL', 'szlMicrometers']
+	
+	serialized_length = len(obj.serialize()) # Serialize for the length.
+	assert hasattr(obj, 'h') # Should have the header attribute.
+	header = obj.h
+	assert hasattr(header, "nBytes")
+	assert hasattr(header, "nRecords")
+	header.nBytes = (header.nBytes[0], serialized_length)
+	header.nRecords = (header.nRecords[0], len(obj.records)) # Should also have the correct number of records.
+	assert serialized_length == len(obj.serialize()) # This should then match.
+	return
+
+
 
 
 def fuzz(buf):
-	debugprint("Called theeeee mutator!!!!!")
 	assert isinstance(buf, bytes) # Should be a bytearray
 	orig_dat = copy.deepcopy(buf)
 
 
-	debugprint("="*20)
-	debugprint("Original data here:")
-	hexdumpdebug(buf)
-	debugprint("="*20)
 
-	debugprint("2!!!!!")
 
 
 	orig_data = copy.deepcopy(buf)
@@ -204,34 +224,22 @@ def fuzz(buf):
 	buf = bytes(buf)
 	try:
 		buf = mutate_emf(buf) # Mutate the EMF file...
-		if buf == orig_data: # Mutate generic.
-			debugprint("The mutated data was the same!!!")
-		else:
-			# Wasn not the same
-			debugprint("The mutated data was NOT the same!!!")
+		#if buf == orig_data: # Mutate generic.
+		#	debugprint("The mutated data was the same!!!")
+		#else:
+		#	# Wasn not the same
+		#	debugprint("The mutated data was NOT the same!!!")
 		return buf
 		if buf == orig_data: # Mutate generic.
-			debugprint("The mutated data was the same!!!")
 			return generic_mutator_bytes.mutate_generic(buf)
 	except:
-		debugprint("EMF mutation failed!!!!! Falling back to generic mutator!")
-		debugprint("Type of buffer before: "+str(type(buf)))
 		buf = generic_mutator_bytes.mutate_generic(buf)
-		debugprint("Type of buffer after: "+str(type(buf)))
-		debugprint("Returning the generic mutated data.")
 		return buf
 		# return orig_data
 
-	debugprint("="*20)
-	debugprint("After mutation:")
-	hexdumpdebug(buf)
-	debugprint("="*20)
 
-	debugprint("3!!!!!")
 	assert isinstance(buf, bytes)
-	debugprint("4!!!!!")
 	#buf = bytearray(buf) # Convert back to bytearray
-	debugprint("4!!!!!")
 
 
 

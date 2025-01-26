@@ -21,7 +21,7 @@ def mutate_integer(value: int, n: int) -> int: # Thanks ChatGPT!!!
 
 	# Choose a random mutation
 	mutation = random.choice(["left_shift", "right_shift", "bit_flip", "add", "subtract"])
-	debugprint("Here is the mutation choice: "+str(mutation))
+	# debugprint("Here is the mutation choice: "+str(mutation))
 	if mutation == "left_shift":
 		shift = random.randint(1, n * 8 - 1)  # Shift amount
 		value = (value << shift) & max_value  # Ensure it fits in n bytes
