@@ -9,12 +9,14 @@ def to_unsigned(byte_integer: int) -> int: # Converts a signed integer in a sing
 
 class ParsedHeader:
     format = STRUCT_FORMAT
-
+    remaining_data = b""
     def __init__(self, data):
         unpacked = []
+        size_thing = 0
         for f in self.format:
             unpacked.append(struct.unpack(f, data[:struct.calcsize(f)]))
             data = data[struct.calcsize(f):]
+            size_thing += struct.calcsize(f) # Add the thing
         fields = FIELDS
         for field, value in zip(fields, unpacked):
             if isinstance(value, tuple): # This is a multibyte value.
@@ -33,7 +35,10 @@ class ParsedHeader:
                 assert value >= 0 and value <= 255 
                 setattr(self, field, (1, value)) # Size of one byte
         # self.remaining_data = data[struct.calcsize("".join(self.format)):]
-        self.remaining_data = data
+        #print("poopoooo")
+        #print("struct.calcsize(f) == "+str(size_thing))
+        #print("self.nSize[1] == "+str(self.nSize[1]))
+        self.remaining_data = data[:self.nSize[1]-size_thing]
 
     @classmethod
     def from_file(cls, filename):
@@ -59,4 +64,4 @@ class ParsedHeader:
             # field_bytes = struct.pack(format_string, field_val)
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
-        return out # Return the output bytes
+        return out + self.remaining_data # Return the output bytes

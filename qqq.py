@@ -8,16 +8,14 @@ def to_unsigned(byte_integer: int) -> int: # Converts a signed integer in a sing
     return byte_integer
 
 class ParsedHeader:
-    format = ['4b', '4b', '16b', '16b', '4b', '4b', '4b', '4b', '2b', '2b', '4b', '4b', '4b', '8b', '8b', '4b', '4b', '4b', '8b']
+    format = STRUCT_FORMAT
     remaining_data = b""
     def __init__(self, data):
         unpacked = []
-        size_thing = 0
         for f in self.format:
             unpacked.append(struct.unpack(f, data[:struct.calcsize(f)]))
             data = data[struct.calcsize(f):]
-            size_thing += struct.calcsize(f) # Add the thing
-        fields = ['iType', 'nSize', 'rclBounds', 'rclFrame', 'dSignature', 'nVersion', 'nBytes', 'nRecords', 'nHandles', 'sReserved', 'nDescription', 'offDescription', 'nPalEntries', 'szlDevice', 'szlMillimeters', 'cbPixelFormat', 'offPixelFormat', 'bOpenGL', 'szlMicrometers']
+        fields = FIELDS
         for field, value in zip(fields, unpacked):
             if isinstance(value, tuple): # This is a multibyte value.
                 # Should be integers all
@@ -35,10 +33,7 @@ class ParsedHeader:
                 assert value >= 0 and value <= 255 
                 setattr(self, field, (1, value)) # Size of one byte
         # self.remaining_data = data[struct.calcsize("".join(self.format)):]
-        #print("poopoooo")
-        #print("struct.calcsize(f) == "+str(size_thing))
-        #print("self.nSize[1] == "+str(self.nSize[1]))
-        self.remaining_data = data[:self.nSize[1]-size_thing]
+        self.remaining_data = data[:self.Size[1]-struct.calcsize(f)]
 
     @classmethod
     def from_file(cls, filename):
@@ -47,12 +42,12 @@ class ParsedHeader:
             return cls(data)
 
     def __repr__(self):
-        fields = ['iType', 'nSize', 'rclBounds', 'rclFrame', 'dSignature', 'nVersion', 'nBytes', 'nRecords', 'nHandles', 'sReserved', 'nDescription', 'offDescription', 'nPalEntries', 'szlDevice', 'szlMillimeters', 'cbPixelFormat', 'offPixelFormat', 'bOpenGL', 'szlMicrometers']
+        fields = FIELDS
         parsed_fields = {field: getattr(self, field) for field in fields}
         return f"<ParsedHeader {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
 
     def serialize(self):
-        fields = ['iType', 'nSize', 'rclBounds', 'rclFrame', 'dSignature', 'nVersion', 'nBytes', 'nRecords', 'nHandles', 'sReserved', 'nDescription', 'offDescription', 'nPalEntries', 'szlDevice', 'szlMillimeters', 'cbPixelFormat', 'offPixelFormat', 'bOpenGL', 'szlMicrometers'] # These are the fields of this object.
+        fields = FIELDS # These are the fields of this object.
         out = b"" # Initialize empty bytes output
         for i, format_string in enumerate(self.format):
             # The corresponding field is fields[i]
@@ -65,4 +60,3 @@ class ParsedHeader:
             field_bytes = field_integer.to_bytes(field_length, byteorder='little') # num.to_bytes(4, byteorder='little')
             out += field_bytes # Add the actual value to the output
         return out + self.remaining_data # Return the output bytes
-

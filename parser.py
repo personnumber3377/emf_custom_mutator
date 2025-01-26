@@ -1,5 +1,5 @@
 
-TEST_FILE_NAME = "DrawString.emf"
+TEST_FILE_NAME = "testfile.emf"
 
 
 # from header import * # For parsing the header etc...
@@ -64,15 +64,18 @@ import struct
 
 from emf_file import * # For parsing the stuff.
 
-
+TEST_FILE_NAME = "testfile.emf"
 
 def test_parser(): # Parse a known EMF file...
 	global TEST
 	TEST = True
+	TEST_FILE_NAME = "testfile.emf"
 	fh = open(TEST_FILE_NAME, "rb")
 	data = fh.read()
 	fh.close()
 	orig_data = copy.deepcopy(data)
+	print("Here is the original data: "+str(orig_data))
+	print("Here is the original data length: "+str(len(orig_data)))
 	# Now parse header...
 	# h, rest_of_data = parse_header(data)
 	# Now try to parse the records
@@ -84,7 +87,7 @@ def test_parser(): # Parse a known EMF file...
 	header_bytes = orig_data[:ind_ser]
 	print("header_bytes: "+str(header_bytes))
 	assert ser_bytes in orig_data
-	assert len(header_bytes) == 108 # This because the header is extension 2
+	#assert len(header_bytes) == 108 # This because the header is extension 2. This no longer does the bullshit
 	ext_stuff = emf_obj.serialize_header() # Serialize the header.
 	assert header_bytes == ext_stuff
 	print("Header seems to be the correct size...")
