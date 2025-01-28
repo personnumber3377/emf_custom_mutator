@@ -266,6 +266,9 @@ def fuzz(buf):
 
 TEST_MUT_COUNT = 100
 
+
+SHOW_MUTATED = True
+
 def test_mut():
 
 	fh = open(TEST_FILE_NAME, "rb")
@@ -277,8 +280,17 @@ def test_mut():
 	# Now try to parse the records
 	# records = parse_records(rest_of_data) # Try to parse the records from the data.
 	for _ in range(TEST_MUT_COUNT):
+		# Write the data to a thing.
+		if SHOW_MUTATED:
+			fh = open("/mnt/c/Users/elsku/image.emf", "wb")
+			fh.write(data)
+			fh.close()
+			# Now try to run the command.
+			os.system("./RenderEMF.exe")
 		orig_data2 = copy.deepcopy(data)
 		data = mutate_emf(data)
+		
+
 		if data == orig_data:
 			print("Mutated data was the same as original.")
 			assert False
@@ -288,8 +300,26 @@ def test_mut():
 
 	return
 
+
+def write_input(data):
+	fh = open("/mnt/c/Users/elsku/image.emf", "wb")
+	fh.write(data)
+	fh.close()
+
+def show_all_queue():
+	directory = "/mnt/c/Users/elsku/outputs4/queue/"
+	for file in os.listdir(directory): # For each file in the directory.
+		fh = open(directory+file, "rb")
+		input_data = fh.read()
+		fh.close()
+		write_input(input_data) # Write the data to the file...
+		# Run the thing.
+		os.system("./RenderEMF.exe")
+
+
 debugprint("Initiefewfwefweeeeeeeeeeeed mutator!!!")
 
 if __name__=="__main__":
-	test_mut()
+	# test_mut()
+	show_all_queue()
 	exit(0)

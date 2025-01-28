@@ -3712,3 +3712,111 @@ Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihOb
 Mutating this field: (4, 1073741826)
 Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 2147483661)}, Remaining: 0 bytes>
 Mutating this field: (4, 2147483661)
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 2)}, Remaining: 0 bytes>
+Mutating this field: (4, 2)
+Mutating this record: <EMR_EXTCREATEFONTINDIRECTW {'Type': (4, 82), 'Size': (4, 368), 'ihFonts': (4, 2)}, Remaining: 356 bytes>
+Mutating this field: (4, 2)
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_EXTCREATEFONTINDIRECTW {'Type': (4, 82), 'Size': (4, 368), 'ihFonts': (4, 3)}, Remaining: 356 bytes>
+Mutating this field: (4, 3)
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 93)}, Remaining: 0 bytes>
+Mutating this field: (4, 93)
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Switching records.
+Mutating this record: <EMR_DELETEOBJECT {'Type': (4, 40), 'Size': (4, 12), 'ihObject': (4, 3)}, Remaining: 0 bytes>
+Mutating this field: (4, 3)
+Switching records.
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 3)}, Remaining: 0 bytes>
+Mutating this field: (4, 3)
+Mutating this record: <EMR_EXTFLOODFILL {'Type': (4, 53), 'Size': (4, 24), 'Start': (8, 1887033263536670861), 'Color': (4, 365706430), 'FloodFillMode': (4, 2711845082)}, Remaining: 0 bytes>
+Mutating this field: (4, 365706430)
+Switching records.
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 2)}, Remaining: 0 bytes>
+Mutating this field: (4, 2)
+Mutating this record: <EMR_EXTCREATEFONTINDIRECTW {'Type': (4, 82), 'Size': (4, 368), 'ihFonts': (4, 3)}, Remaining: 356 bytes>
+Mutating this field: (4, 3)
+Switching records.
+Switching records.
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 201326592)}, Remaining: 0 bytes>
+Mutating this field: (4, 201326592)
+Switching records.
+Mutating this record: <EMR_EXTTEXTOUTW {'Type': (4, 84), 'Size': (4, 160), 'Bounds': (16, 340282366920938463444927863358058659840), 'iGraphicsMode': (4, 1), 'exScale': (4, 1108150955), 'eyScale': (4, 1108148224)}, Remaining: 124 bytes>
+Mutating this field: (16, 340282366920938463444927863358058659840)
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Mutating this record: <EMR_CREATEBRUSHINDIRECT {'Type': (4, 39), 'Size': (4, 24), 'ihBrush': (4, 1), 'LogBrush': (12, 55352132587663392770)}, Remaining: 0 bytes>
+Mutating this field: (4, 1)
+Switching records.
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 4)}, Remaining: 0 bytes>
+Mutating this field: (4, 4)
+Mutating this record: <EMR_EXTCREATEFONTINDIRECTW {'Type': (4, 82), 'Size': (4, 368), 'ihFonts': (4, 3)}, Remaining: 356 bytes>
+Mutating this field: (4, 3)
+Mutating this record: <EMR_EXTCREATEFONTINDIRECTW {'Type': (4, 82), 'Size': (4, 368), 'ihFonts': (4, 2)}, Remaining: 356 bytes>
+Mutating this field: (4, 2)
+Mutating this record: <EMR_DELETEOBJECT {'Type': (4, 40), 'Size': (4, 12), 'ihObject': (4, 3)}, Remaining: 0 bytes>
+Mutating this field: (4, 3)
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 3)}, Remaining: 0 bytes>
+Mutating this field: (4, 3)
+Switching records.
+Switching records.
+Initiefewfwefweeeeeeeeeeeed mutator!!!
+Mutating this record: <EMR_CREATEBRUSHINDIRECT {'Type': (4, 39), 'Size': (4, 24), 'ihBrush': (4, 1), 'LogBrush': (12, 55352132587663392770)}, Remaining: 0 bytes>
+Mutating this field: (12, 55352132587663392770)
+Switching records.
+Mutating this record: <EMR_CREATEBRUSHINDIRECT {'Type': (4, 39), 'Size': (4, 24), 'ihBrush': (4, 1), 'LogBrush': (12, 408893480616897783367991296)}, Remaining: 0 bytes>
+Mutating this field: (12, 408893480616897783367991296)
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_DELETEOBJECT {'Type': (4, 40), 'Size': (4, 12), 'ihObject': (4, 3)}, Remaining: 0 bytes>
+Mutating this field: (4, 3)
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <newdummy.fake_record_other object at 0x7f4f04995fa0>
+No fields...
+Switching records.
+Mutating this record: <EMR_EXTCREATEFONTINDIRECTW {'Type': (4, 82), 'Size': (4, 368), 'ihFonts': (4, 4)}, Remaining: 356 bytes>
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 3)}, Remaining: 0 bytes>
+Mutating this field: (4, 3)
+Switching records.
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 2)}, Remaining: 0 bytes>
+Mutating this field: (4, 2)
+Mutating this record: <EMR_SETSTRETCHBLTMODE {'Type': (4, 21), 'Size': (4, 12), 'StretchMode': (4, 4158320439)}, Remaining: 0 bytes>
+Mutating this field: (4, 4158320439)
+Switching records.
+Mutating this record: <EMR_EXTCREATEFONTINDIRECTW {'Type': (4, 82), 'Size': (4, 368), 'ihFonts': (4, 2)}, Remaining: 356 bytes>
+Mutating this field: (4, 2)
+Mutating this record: <EMR_SETBKMODE {'Type': (4, 18), 'Size': (4, 12), 'BackgroundMode': (4, 1)}, Remaining: 0 bytes>
+Mutating this field: (4, 1)
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 2147483661)}, Remaining: 0 bytes>
+Mutating this field: (4, 2147483661)
+Switching records.
+Mutating this record: <EMR_EXTTEXTOUTW {'Type': (4, 84), 'Size': (4, 160), 'Bounds': (16, 340282366920938463444927863358058659840), 'iGraphicsMode': (4, 1), 'exScale': (4, 1108150955), 'eyScale': (4, 1108148224)}, Remaining: 124 bytes>
+Mutating this field: (4, 1108148224)
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_BITBLT {'Type': (4, 76), 'Size': (4, 12200), 'Bounds': (16, 7051306465411286268578835202048), 'xDest': (4, 0), 'yDest': (4, 45), 'cxDest': (4, 90), 'cyDest': (4, 45), 'BitBltRasterOperation': (4, 13369376), 'xSrc': (4, 0), 'ySrc': (4, 0), 'XformSrc': (24, 84405977732342157929391748328867233792), 'BkColorSrc': (4, 16777215), 'UsageSrc': (4, 0), 'offBmiSrc': (4, 100), 'cbBmiSrc': (4, 40), 'offBitsSrc': (4, 140), 'cbBitsSrc': (4, 12060)}, Remaining: 12100 bytes>
+Mutating this field: (4, 16777215)
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_SELECTOBJECT {'Type': (4, 37), 'Size': (4, 12), 'ihObject': (4, 2147483648)}, Remaining: 0 bytes>
+Mutating this field: (4, 2147483648)
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Switching records.
+Mutating this record: <EMR_EXTCREATEFONTINDIRECTW {'Type': (4, 82), 'Size': (4, 24), 'ihFonts': (4, 1398209600)}, Remaining: 12 bytes>
