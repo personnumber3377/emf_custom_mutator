@@ -300,6 +300,7 @@ def test_mut():
 
 	return
 
+import subprocess
 
 def write_input(data):
 	fh = open("/mnt/c/Users/elsku/image.emf", "wb")
@@ -309,6 +310,9 @@ def write_input(data):
 def show_all_queue():
 	directory = "/mnt/c/Users/elsku/outputs4/queue/"
 	for file in os.listdir(directory): # For each file in the directory.
+		print("file: "+str(file))
+		if "id_" not in file:
+			continue
 		fh = open(directory+file, "rb")
 		input_data = fh.read()
 		fh.close()
@@ -317,9 +321,62 @@ def show_all_queue():
 		os.system("./RenderEMF.exe")
 
 
-debugprint("Initiefewfwefweeeeeeeeeeeed mutator!!!")
+# debugprint("Initiefewfwefweeeeeeeeeeeed mutator!!!")
+
+
+def load_data(filename):
+	fh = open(filename, "rb")
+	data = fh.read()
+	fh.close()
+	return data
+
+def save_data(filename, data):
+	fh = open(filename, "wb")
+	fh.write(data)
+	fh.close()
+	return
+
+GEN_HOW_MANY = 1000
+
+
+def valid() -> bool:
+	try:
+		result = subprocess.run(["./checkvalidemf.exe", "testfile.emf"], capture_output=True, text=True, check=True)
+	except:
+		return False
+	return True
+	#output = result.stdout.strip()  # Strip any extra whitespace
+	#print("output: "+str(output))
+	#return False
+
+
+
+def generate_corpus():
+	initial_files = os.listdir("./initial/") # initial files....
+	current_corpus = [load_data("./initial/"+file) for file in initial_files] # Load the initial data stuff.
+	while len(current_corpus) < GEN_HOW_MANY: # Generate how many.
+		random_selected = copy.deepcopy(random.choice(current_corpus))
+		# Mutate
+		random_selected = mutate_emf(random_selected)
+		# Save to input.
+		save_data("testfile.emf", random_selected)
+		# Valid?
+		if valid():
+			# Save valid data to our corpus.
+			current_corpus.append(copy.deepcopy(random_selected))
+			print("Current corpus length: "+str(len(current_corpus)))
+
+	# Save each file to corpus directory.
+	for i, data in enumerate(current_corpus):
+		fh = open("./corpus/"+str(i), "wb")
+		fh.write(data)
+		fh.close()
+	
+	return
+
 
 if __name__=="__main__":
 	# test_mut()
-	show_all_queue()
+	# show_all_queue()
+	generate_corpus()
 	exit(0)
