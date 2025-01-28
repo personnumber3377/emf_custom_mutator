@@ -336,7 +336,7 @@ def save_data(filename, data):
 	fh.close()
 	return
 
-GEN_HOW_MANY = 1000
+GEN_HOW_MANY = 50000
 
 
 def valid() -> bool:
@@ -365,13 +365,17 @@ def generate_corpus():
 			# Save valid data to our corpus.
 			current_corpus.append(copy.deepcopy(random_selected))
 			print("Current corpus length: "+str(len(current_corpus)))
+		# Check for automatic stop.
+		stop = load_data("manual_stop")
+		if stop == b"stop\n":
+			break # Automatic stop.
 
 	# Save each file to corpus directory.
 	for i, data in enumerate(current_corpus):
 		fh = open("./corpus/"+str(i), "wb")
 		fh.write(data)
 		fh.close()
-	
+
 	return
 
 

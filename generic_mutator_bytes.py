@@ -2,7 +2,7 @@
 import random
 import string as string_mod # string.printable
 
-MAX_REPEAT_COUNT = 500
+MAX_REPEAT_COUNT = 5
 
 def remove_substring(string: str) -> str:
 	if not string:
