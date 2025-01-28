@@ -67,7 +67,7 @@ def mutate_extra_data(record) -> None: # This function mutates extra data in
 
 
 
-BANNED_REC_INTEGERS = [0x75]
+BANNED_REC_INTEGERS = [0x75, 69, 107]
 
 def add_random_record(obj: EMFFile) -> None: # Generates a random record for this EMF file and appends it somewhere in the file.
 	# Lookup a random record type.
