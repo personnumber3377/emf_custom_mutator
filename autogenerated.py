@@ -13,7 +13,7 @@ class EMR_ALPHABLEND:
     name = "EMR_ALPHABLEND"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'xDest', 'yDest', 'cxDest', 'cyDest', 'BLENDFUNCTION', 'xSrc', 'ySrc', 'XformSrc', 'BkColorSrc', 'UsageSrc', 'offBmiSrc', 'cbBmiSrc', 'offBitsSrc', 'cbBitsSrc', 'cxSrc', 'cySrc'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -70,7 +70,7 @@ class EMR_ALPHABLEND:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_ALPHABLEND {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_ALPHABLEND {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -103,7 +103,7 @@ class EMR_BITBLT:
     name = "EMR_BITBLT"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'xDest', 'yDest', 'cxDest', 'cyDest', 'BitBltRasterOperation', 'xSrc', 'ySrc', 'XformSrc', 'BkColorSrc', 'UsageSrc', 'offBmiSrc', 'cbBmiSrc', 'offBitsSrc', 'cbBitsSrc'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -160,7 +160,7 @@ class EMR_BITBLT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_BITBLT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_BITBLT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -193,7 +193,7 @@ class EMR_MASKBLT:
     name = "EMR_MASKBLT"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'xDest', 'yDest', 'cxDest', 'cyDest', 'ROP4', 'Reserved', 'xSrc', 'ySrc', 'XformSrc', 'BkColorSrc', 'UsageSrc', 'offBmiSrc', 'cbBmiSrc', 'offBitsSrc', 'cbBitsSrc', 'xMask', 'yMask', 'UsageMask', 'offBmiMask', 'cbBmiMask', 'offBitsMask', 'cbBitsMask'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -250,7 +250,7 @@ class EMR_MASKBLT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_MASKBLT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_MASKBLT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -283,7 +283,7 @@ class EMR_PLGBLT:
     name = "EMR_PLGBLT"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'aptlDest', 'xSrc', 'ySrc', 'cxSrc', 'cySrc', 'XformSrc', 'BkColorSrc', 'UsageSrc', 'offBmiSrc', 'cbBmiSrc', 'offBitsSrc', 'cbBitsSrc', 'xMask', 'yMask', 'UsageMask', 'offBmiMask', 'cbBmiMask', 'offBitsMask', 'cbBitsMask'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -340,7 +340,7 @@ class EMR_PLGBLT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_PLGBLT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_PLGBLT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -373,7 +373,7 @@ class EMR_SETDIBITSTODEVICE:
     name = "EMR_SETDIBITSTODEVICE"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'xDest', 'yDest', 'xSrc', 'ySrc', 'cxSrc', 'cySrc', 'offBmiSrc', 'cbBmiSrc', 'offBitsSrc', 'cbBitsSrc', 'UsageSrc', 'iStartScan', 'cScans'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -430,7 +430,7 @@ class EMR_SETDIBITSTODEVICE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETDIBITSTODEVICE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETDIBITSTODEVICE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -463,7 +463,7 @@ class EMR_STRETCHBLT:
     name = "EMR_STRETCHBLT"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'xDest', 'yDest', 'cxDest', 'cyDest', 'BitBltRasterOperation', 'xSrc', 'ySrc', 'XformSrc', 'BkColorSrc', 'UsageSrc', 'offBmiSrc', 'cbBmiSrc', 'offBitsSrc', 'cbBitsSrc', 'cxSrc', 'cySrc'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -520,7 +520,7 @@ class EMR_STRETCHBLT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_STRETCHBLT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_STRETCHBLT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -553,7 +553,7 @@ class EMR_STRETCHDIBITS:
     name = "EMR_STRETCHDIBITS"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'xDest', 'yDest', 'xSrc', 'ySrc', 'cxSrc', 'cySrc', 'offBmiSrc', 'cbBmiSrc', 'offBitsSrc', 'cbBitsSrc', 'UsageSrc', 'BitBltRasterOperation', 'cxDest', 'cyDest'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -610,7 +610,7 @@ class EMR_STRETCHDIBITS:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_STRETCHDIBITS {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_STRETCHDIBITS {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -643,7 +643,7 @@ class EMR_TRANSPARENTBLT:
     name = "EMR_TRANSPARENTBLT"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'xDest', 'yDest', 'cxDest', 'cyDest', 'TransparentColor', 'xSrc', 'ySrc', 'XformSrc', 'BkColorSrc', 'UsageSrc', 'offBmiSrc', 'cbBmiSrc', 'offBitsSrc', 'cbBitsSrc', 'cxSrc', 'cySrc'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -700,7 +700,7 @@ class EMR_TRANSPARENTBLT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_TRANSPARENTBLT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_TRANSPARENTBLT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -733,7 +733,7 @@ class EMR_EXCLUDECLIPRECT:
     name = "EMR_EXCLUDECLIPRECT"
     has_variable = False
     fields = ['Type', 'Size', 'Clip'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -790,7 +790,7 @@ class EMR_EXCLUDECLIPRECT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_EXCLUDECLIPRECT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_EXCLUDECLIPRECT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -823,7 +823,7 @@ class EMR_EXTSELECTCLIPRGN:
     name = "EMR_EXTSELECTCLIPRGN"
     has_variable = True
     fields = ['Type', 'Size', 'RgnDataSize', 'RegionMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -880,7 +880,7 @@ class EMR_EXTSELECTCLIPRGN:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_EXTSELECTCLIPRGN {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_EXTSELECTCLIPRGN {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -913,7 +913,7 @@ class EMR_INTERSECTCLIPRECT:
     name = "EMR_INTERSECTCLIPRECT"
     has_variable = False
     fields = ['Type', 'Size', 'Clip'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -970,7 +970,7 @@ class EMR_INTERSECTCLIPRECT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_INTERSECTCLIPRECT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_INTERSECTCLIPRECT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1003,7 +1003,7 @@ class EMR_OFFSETCLIPRGN:
     name = "EMR_OFFSETCLIPRGN"
     has_variable = False
     fields = ['Type', 'Size', 'Offset'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1060,7 +1060,7 @@ class EMR_OFFSETCLIPRGN:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_OFFSETCLIPRGN {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_OFFSETCLIPRGN {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1093,7 +1093,7 @@ class EMR_SELECTCLIPPATH:
     name = "EMR_SELECTCLIPPATH"
     has_variable = True
     fields = ['Type', 'Size', 'RegionMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1150,7 +1150,7 @@ class EMR_SELECTCLIPPATH:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SELECTCLIPPATH {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SELECTCLIPPATH {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1183,7 +1183,7 @@ class EMR_COMMENT:
     name = "EMR_COMMENT"
     has_variable = True
     fields = ['Type', 'Size'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1240,7 +1240,7 @@ class EMR_COMMENT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_COMMENT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_COMMENT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1273,7 +1273,7 @@ class EMR_COMMENT_EMFPLUS:
     name = "EMR_COMMENT_EMFPLUS"
     has_variable = True
     fields = ['Type', 'Size', 'CommentIdentifier'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1330,7 +1330,7 @@ class EMR_COMMENT_EMFPLUS:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_COMMENT_EMFPLUS {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_COMMENT_EMFPLUS {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1363,7 +1363,7 @@ class EMR_COMMENT_EMFSPOOL:
     name = "EMR_COMMENT_EMFSPOOL"
     has_variable = True
     fields = ['Type', 'Size', 'CommentIdentifier', 'EMFSpoolRecordIdentifier'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1420,7 +1420,7 @@ class EMR_COMMENT_EMFSPOOL:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_COMMENT_EMFSPOOL {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_COMMENT_EMFSPOOL {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1453,7 +1453,7 @@ class EMR_EOF:
     name = "EMR_EOF"
     has_variable = True
     fields = ['Type', 'Size', 'nPalEntries', 'offPalEntries', 'SizeLast'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1510,7 +1510,7 @@ class EMR_EOF:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_EOF {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_EOF {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1543,7 +1543,7 @@ class EMR_ANGLEARC:
     name = "EMR_ANGLEARC"
     has_variable = False
     fields = ['Type', 'Size', 'Center', 'Radius', 'StartAngle', 'SweepAngle'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1600,7 +1600,7 @@ class EMR_ANGLEARC:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_ANGLEARC {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_ANGLEARC {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1633,7 +1633,7 @@ class EMR_ARC:
     name = "EMR_ARC"
     has_variable = False
     fields = ['Type', 'Size', 'Box', 'Start', 'End'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1690,7 +1690,7 @@ class EMR_ARC:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_ARC {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_ARC {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1723,7 +1723,7 @@ class EMR_ARCTO:
     name = "EMR_ARCTO"
     has_variable = False
     fields = ['Type', 'Size', 'Box', 'Start', 'End'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1780,7 +1780,7 @@ class EMR_ARCTO:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_ARCTO {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_ARCTO {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1813,7 +1813,7 @@ class EMR_CHORD:
     name = "EMR_CHORD"
     has_variable = False
     fields = ['Type', 'Size', 'Box', 'Start', 'End'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1870,7 +1870,7 @@ class EMR_CHORD:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_CHORD {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_CHORD {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1903,7 +1903,7 @@ class EMR_ELLIPSE:
     name = "EMR_ELLIPSE"
     has_variable = False
     fields = ['Type', 'Size', 'Box'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -1960,7 +1960,7 @@ class EMR_ELLIPSE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_ELLIPSE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_ELLIPSE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -1993,7 +1993,7 @@ class EMR_EXTFLOODFILL:
     name = "EMR_EXTFLOODFILL"
     has_variable = False
     fields = ['Type', 'Size', 'Start', 'Color', 'FloodFillMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2050,7 +2050,7 @@ class EMR_EXTFLOODFILL:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_EXTFLOODFILL {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_EXTFLOODFILL {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2083,7 +2083,7 @@ class EMR_EXTTEXTOUTA:
     name = "EMR_EXTTEXTOUTA"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'iGraphicsMode', 'exScale', 'eyScale'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2140,7 +2140,7 @@ class EMR_EXTTEXTOUTA:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_EXTTEXTOUTA {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_EXTTEXTOUTA {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2173,7 +2173,7 @@ class EMR_EXTTEXTOUTW:
     name = "EMR_EXTTEXTOUTW"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'iGraphicsMode', 'exScale', 'eyScale'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2230,7 +2230,7 @@ class EMR_EXTTEXTOUTW:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_EXTTEXTOUTW {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_EXTTEXTOUTW {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2263,7 +2263,7 @@ class EMR_FILLPATH:
     name = "EMR_FILLPATH"
     has_variable = False
     fields = ['Type', 'Size', 'Bounds'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2320,7 +2320,7 @@ class EMR_FILLPATH:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_FILLPATH {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_FILLPATH {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2353,7 +2353,7 @@ class EMR_FILLRGN:
     name = "EMR_FILLRGN"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'RgnDataSize', 'ihBrush'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2410,7 +2410,7 @@ class EMR_FILLRGN:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_FILLRGN {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_FILLRGN {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2443,7 +2443,7 @@ class EMR_FRAMERGN:
     name = "EMR_FRAMERGN"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'RgnDataSize', 'ihBrush', 'Width', 'Height'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2500,7 +2500,7 @@ class EMR_FRAMERGN:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_FRAMERGN {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_FRAMERGN {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2533,7 +2533,7 @@ class EMR_GRADIENTFILL:
     name = "EMR_GRADIENTFILL"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'nVer', 'nTri', 'ulMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2590,7 +2590,7 @@ class EMR_GRADIENTFILL:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_GRADIENTFILL {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_GRADIENTFILL {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2623,7 +2623,7 @@ class EMR_LINETO:
     name = "EMR_LINETO"
     has_variable = False
     fields = ['Type', 'Size', 'Point'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2680,7 +2680,7 @@ class EMR_LINETO:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_LINETO {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_LINETO {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2713,7 +2713,7 @@ class EMR_PAINTRGN:
     name = "EMR_PAINTRGN"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'RgnDataSize'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2770,7 +2770,7 @@ class EMR_PAINTRGN:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_PAINTRGN {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_PAINTRGN {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2803,7 +2803,7 @@ class EMR_PIE:
     name = "EMR_PIE"
     has_variable = False
     fields = ['Type', 'Size', 'Box', 'Start', 'End'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2860,7 +2860,7 @@ class EMR_PIE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_PIE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_PIE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2893,7 +2893,7 @@ class EMR_POLYBEZIER:
     name = "EMR_POLYBEZIER"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -2950,7 +2950,7 @@ class EMR_POLYBEZIER:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYBEZIER {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYBEZIER {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -2983,7 +2983,7 @@ class EMR_POLYBEZIER16:
     name = "EMR_POLYBEZIER16"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3040,7 +3040,7 @@ class EMR_POLYBEZIER16:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYBEZIER16 {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYBEZIER16 {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3073,7 +3073,7 @@ class EMR_POLYBEZIERTO:
     name = "EMR_POLYBEZIERTO"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3130,7 +3130,7 @@ class EMR_POLYBEZIERTO:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYBEZIERTO {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYBEZIERTO {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3163,7 +3163,7 @@ class EMR_POLYBEZIERTO16:
     name = "EMR_POLYBEZIERTO16"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3220,7 +3220,7 @@ class EMR_POLYBEZIERTO16:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYBEZIERTO16 {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYBEZIERTO16 {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3253,7 +3253,7 @@ class EMR_POLYDRAW:
     name = "EMR_POLYDRAW"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3310,7 +3310,7 @@ class EMR_POLYDRAW:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYDRAW {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYDRAW {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3343,7 +3343,7 @@ class EMR_POLYDRAW16:
     name = "EMR_POLYDRAW16"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3400,7 +3400,7 @@ class EMR_POLYDRAW16:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYDRAW16 {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYDRAW16 {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3433,7 +3433,7 @@ class EMR_POLYGON:
     name = "EMR_POLYGON"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3490,7 +3490,7 @@ class EMR_POLYGON:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYGON {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYGON {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3523,7 +3523,7 @@ class EMR_POLYGON16:
     name = "EMR_POLYGON16"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3580,7 +3580,7 @@ class EMR_POLYGON16:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYGON16 {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYGON16 {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3613,7 +3613,7 @@ class EMR_POLYLINE:
     name = "EMR_POLYLINE"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3670,7 +3670,7 @@ class EMR_POLYLINE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYLINE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYLINE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3703,7 +3703,7 @@ class EMR_POLYLINE16:
     name = "EMR_POLYLINE16"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3760,7 +3760,7 @@ class EMR_POLYLINE16:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYLINE16 {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYLINE16 {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3793,7 +3793,7 @@ class EMR_POLYLINETO:
     name = "EMR_POLYLINETO"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3850,7 +3850,7 @@ class EMR_POLYLINETO:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYLINETO {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYLINETO {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3883,7 +3883,7 @@ class EMR_POLYLINETO16:
     name = "EMR_POLYLINETO16"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -3940,7 +3940,7 @@ class EMR_POLYLINETO16:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYLINETO16 {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYLINETO16 {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -3973,7 +3973,7 @@ class EMR_POLYPOLYGON:
     name = "EMR_POLYPOLYGON"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'NumberOfPolygons', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4030,7 +4030,7 @@ class EMR_POLYPOLYGON:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYPOLYGON {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYPOLYGON {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4063,7 +4063,7 @@ class EMR_POLYPOLYGON16:
     name = "EMR_POLYPOLYGON16"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'NumberOfPolygons', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4120,7 +4120,7 @@ class EMR_POLYPOLYGON16:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYPOLYGON16 {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYPOLYGON16 {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4153,7 +4153,7 @@ class EMR_POLYPOLYLINE:
     name = "EMR_POLYPOLYLINE"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'NumberOfPolylines', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4210,7 +4210,7 @@ class EMR_POLYPOLYLINE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYPOLYLINE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYPOLYLINE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4243,7 +4243,7 @@ class EMR_POLYPOLYLINE16:
     name = "EMR_POLYPOLYLINE16"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'NumberOfPolylines', 'Count'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4300,7 +4300,7 @@ class EMR_POLYPOLYLINE16:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYPOLYLINE16 {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYPOLYLINE16 {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4333,7 +4333,7 @@ class EMR_POLYTEXTOUTA:
     name = "EMR_POLYTEXTOUTA"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'iGraphicsMode', 'exScale', 'eyScale', 'cStrings'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4390,7 +4390,7 @@ class EMR_POLYTEXTOUTA:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYTEXTOUTA {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYTEXTOUTA {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4423,7 +4423,7 @@ class EMR_POLYTEXTOUTW:
     name = "EMR_POLYTEXTOUTW"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'iGraphicsMode', 'exScale', 'eyScale', 'cStrings'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4480,7 +4480,7 @@ class EMR_POLYTEXTOUTW:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_POLYTEXTOUTW {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_POLYTEXTOUTW {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4513,7 +4513,7 @@ class EMR_RECTANGLE:
     name = "EMR_RECTANGLE"
     has_variable = False
     fields = ['Type', 'Size', 'Box'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4570,7 +4570,7 @@ class EMR_RECTANGLE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_RECTANGLE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_RECTANGLE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4603,7 +4603,7 @@ class EMR_ROUNDRECT:
     name = "EMR_ROUNDRECT"
     has_variable = False
     fields = ['Type', 'Size', 'Box', 'Corner'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4660,7 +4660,7 @@ class EMR_ROUNDRECT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_ROUNDRECT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_ROUNDRECT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4693,7 +4693,7 @@ class EMR_SETPIXELV:
     name = "EMR_SETPIXELV"
     has_variable = False
     fields = ['Type', 'Size', 'Pixel', 'Color'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4750,7 +4750,7 @@ class EMR_SETPIXELV:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETPIXELV {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETPIXELV {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4783,7 +4783,7 @@ class EMR_SMALLTEXTOUT:
     name = "EMR_SMALLTEXTOUT"
     has_variable = True
     fields = ['Type', 'Size', 'x', 'y', 'cChars', 'fuOptions', 'iGraphicsMode', 'exScale', 'eyScale'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4840,7 +4840,7 @@ class EMR_SMALLTEXTOUT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SMALLTEXTOUT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SMALLTEXTOUT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4873,7 +4873,7 @@ class EMR_STROKEANDFILLPATH:
     name = "EMR_STROKEANDFILLPATH"
     has_variable = False
     fields = ['Type', 'Size', 'Bounds'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -4930,7 +4930,7 @@ class EMR_STROKEANDFILLPATH:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_STROKEANDFILLPATH {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_STROKEANDFILLPATH {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -4963,7 +4963,7 @@ class EMR_STROKEPATH:
     name = "EMR_STROKEPATH"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5020,7 +5020,7 @@ class EMR_STROKEPATH:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_STROKEPATH {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_STROKEPATH {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5053,7 +5053,7 @@ class EMR_DRAWESCAPE:
     name = "EMR_DRAWESCAPE"
     has_variable = True
     fields = ['Type', 'Size', 'cjIn'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5110,7 +5110,7 @@ class EMR_DRAWESCAPE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_DRAWESCAPE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_DRAWESCAPE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5143,7 +5143,7 @@ class EMR_EXTESCAPE:
     name = "EMR_EXTESCAPE"
     has_variable = True
     fields = ['Type', 'Size', 'cjIn'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5200,7 +5200,7 @@ class EMR_EXTESCAPE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_EXTESCAPE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_EXTESCAPE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5233,7 +5233,7 @@ class EMR_NAMEDESCAPE:
     name = "EMR_NAMEDESCAPE"
     has_variable = True
     fields = ['Type', 'Size', 'cjDriver', 'cjIn'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5290,7 +5290,7 @@ class EMR_NAMEDESCAPE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_NAMEDESCAPE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_NAMEDESCAPE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5323,7 +5323,7 @@ class EMR_CREATEBRUSHINDIRECT:
     name = "EMR_CREATEBRUSHINDIRECT"
     has_variable = False
     fields = ['Type', 'Size', 'ihBrush', 'LogBrush'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5380,7 +5380,7 @@ class EMR_CREATEBRUSHINDIRECT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_CREATEBRUSHINDIRECT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_CREATEBRUSHINDIRECT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5413,7 +5413,7 @@ class EMR_CREATECOLORSPACE:
     name = "EMR_CREATECOLORSPACE"
     has_variable = True
     fields = ['Type', 'Size', 'ihCS'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5470,7 +5470,7 @@ class EMR_CREATECOLORSPACE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_CREATECOLORSPACE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_CREATECOLORSPACE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5503,7 +5503,7 @@ class EMR_CREATECOLORSPACEW:
     name = "EMR_CREATECOLORSPACEW"
     has_variable = True
     fields = ['Type', 'Size', 'ihCS', 'dwFlags', 'cbData'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5560,7 +5560,7 @@ class EMR_CREATECOLORSPACEW:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_CREATECOLORSPACEW {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_CREATECOLORSPACEW {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5593,7 +5593,7 @@ class EMR_CREATEDIBPATTERNBRUSHPT:
     name = "EMR_CREATEDIBPATTERNBRUSHPT"
     has_variable = True
     fields = ['Type', 'Size', 'ihBrush', 'Usage', 'offBmi', 'cbBmi', 'offBits', 'cbBits'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5650,7 +5650,7 @@ class EMR_CREATEDIBPATTERNBRUSHPT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_CREATEDIBPATTERNBRUSHPT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_CREATEDIBPATTERNBRUSHPT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5683,7 +5683,7 @@ class EMR_CREATEMONOBRUSH:
     name = "EMR_CREATEMONOBRUSH"
     has_variable = True
     fields = ['Type', 'Size', 'ihBrush', 'Usage', 'offBmi', 'cbBmi', 'offBits', 'cbBits'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5740,7 +5740,7 @@ class EMR_CREATEMONOBRUSH:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_CREATEMONOBRUSH {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_CREATEMONOBRUSH {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5773,7 +5773,7 @@ class EMR_CREATEPALETTE:
     name = "EMR_CREATEPALETTE"
     has_variable = True
     fields = ['Type', 'Size', 'ihPal'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5830,7 +5830,7 @@ class EMR_CREATEPALETTE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_CREATEPALETTE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_CREATEPALETTE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5863,7 +5863,7 @@ class EMR_CREATEPEN:
     name = "EMR_CREATEPEN"
     has_variable = False
     fields = ['Type', 'Size', 'ihPen', 'LogPen'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -5920,7 +5920,7 @@ class EMR_CREATEPEN:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_CREATEPEN {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_CREATEPEN {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -5953,7 +5953,7 @@ class EMR_EXTCREATEFONTINDIRECTW:
     name = "EMR_EXTCREATEFONTINDIRECTW"
     has_variable = True
     fields = ['Type', 'Size', 'ihFonts'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6010,7 +6010,7 @@ class EMR_EXTCREATEFONTINDIRECTW:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_EXTCREATEFONTINDIRECTW {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_EXTCREATEFONTINDIRECTW {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6043,7 +6043,7 @@ class EMR_EXTCREATEPEN:
     name = "EMR_EXTCREATEPEN"
     has_variable = True
     fields = ['Type', 'Size', 'ihPen', 'offBmi', 'cbBmi', 'offBits', 'cbBits'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6100,7 +6100,7 @@ class EMR_EXTCREATEPEN:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_EXTCREATEPEN {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_EXTCREATEPEN {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6133,7 +6133,7 @@ class EMR_COLORCORRECTPALETTE:
     name = "EMR_COLORCORRECTPALETTE"
     has_variable = False
     fields = ['Type', 'Size', 'ihPalette', 'nFirstEntry', 'nPalEntries', 'nReserved'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6190,7 +6190,7 @@ class EMR_COLORCORRECTPALETTE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_COLORCORRECTPALETTE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_COLORCORRECTPALETTE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6223,7 +6223,7 @@ class EMR_DELETECOLORSPACE:
     name = "EMR_DELETECOLORSPACE"
     has_variable = False
     fields = ['Type', 'Size', 'ihCS'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6280,7 +6280,7 @@ class EMR_DELETECOLORSPACE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_DELETECOLORSPACE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_DELETECOLORSPACE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6313,7 +6313,7 @@ class EMR_DELETEOBJECT:
     name = "EMR_DELETEOBJECT"
     has_variable = False
     fields = ['Type', 'Size', 'ihObject'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6370,7 +6370,7 @@ class EMR_DELETEOBJECT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_DELETEOBJECT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_DELETEOBJECT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6403,7 +6403,7 @@ class EMR_RESIZEPALETTE:
     name = "EMR_RESIZEPALETTE"
     has_variable = False
     fields = ['Type', 'Size', 'ihPal', 'NumberOfEntries'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6460,7 +6460,7 @@ class EMR_RESIZEPALETTE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_RESIZEPALETTE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_RESIZEPALETTE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6493,7 +6493,7 @@ class EMR_SELECTOBJECT:
     name = "EMR_SELECTOBJECT"
     has_variable = False
     fields = ['Type', 'Size', 'ihObject'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6550,7 +6550,7 @@ class EMR_SELECTOBJECT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SELECTOBJECT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SELECTOBJECT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6583,7 +6583,7 @@ class EMR_SELECTPALETTE:
     name = "EMR_SELECTPALETTE"
     has_variable = False
     fields = ['Type', 'Size', 'ihPal'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6640,7 +6640,7 @@ class EMR_SELECTPALETTE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SELECTPALETTE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SELECTPALETTE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6673,7 +6673,7 @@ class EMR_SETCOLORSPACE:
     name = "EMR_SETCOLORSPACE"
     has_variable = False
     fields = ['Type', 'Size', 'ihCS'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6730,7 +6730,7 @@ class EMR_SETCOLORSPACE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETCOLORSPACE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETCOLORSPACE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6763,7 +6763,7 @@ class EMR_SETPALETTEENTRIES:
     name = "EMR_SETPALETTEENTRIES"
     has_variable = True
     fields = ['Type', 'Size', 'ihPal', 'Start', 'NumberofEntries'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6820,7 +6820,7 @@ class EMR_SETPALETTEENTRIES:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETPALETTEENTRIES {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETPALETTEENTRIES {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6853,7 +6853,7 @@ class EMR_GLSBOUNDEDRECORD:
     name = "EMR_GLSBOUNDEDRECORD"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'cbData'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -6910,7 +6910,7 @@ class EMR_GLSBOUNDEDRECORD:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_GLSBOUNDEDRECORD {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_GLSBOUNDEDRECORD {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -6943,7 +6943,7 @@ class EMR_GLSRECORD:
     name = "EMR_GLSRECORD"
     has_variable = True
     fields = ['Type', 'Size', 'cbData'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7000,7 +7000,7 @@ class EMR_GLSRECORD:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_GLSRECORD {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_GLSRECORD {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7033,7 +7033,7 @@ class EMR_COLORMATCHTOTARGETW:
     name = "EMR_COLORMATCHTOTARGETW"
     has_variable = True
     fields = ['Type', 'Size', 'dwAction', 'dwFlags', 'cbName', 'cbData'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7090,7 +7090,7 @@ class EMR_COLORMATCHTOTARGETW:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_COLORMATCHTOTARGETW {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_COLORMATCHTOTARGETW {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7123,7 +7123,7 @@ class EMR_FORCEUFIMAPPING:
     name = "EMR_FORCEUFIMAPPING"
     has_variable = False
     fields = ['Type', 'Size', 'ufi'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7180,7 +7180,7 @@ class EMR_FORCEUFIMAPPING:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_FORCEUFIMAPPING {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_FORCEUFIMAPPING {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7213,7 +7213,7 @@ class EMR_INVERTRGN:
     name = "EMR_INVERTRGN"
     has_variable = True
     fields = ['Type', 'Size', 'Bounds', 'RgnDataSize'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7270,7 +7270,7 @@ class EMR_INVERTRGN:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_INVERTRGN {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_INVERTRGN {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7303,7 +7303,7 @@ class EMR_MOVETOEX:
     name = "EMR_MOVETOEX"
     has_variable = False
     fields = ['Type', 'Size', 'Offset'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7360,7 +7360,7 @@ class EMR_MOVETOEX:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_MOVETOEX {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_MOVETOEX {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7393,7 +7393,7 @@ class EMR_PIXELFORMAT:
     name = "EMR_PIXELFORMAT"
     has_variable = False
     fields = ['Type', 'Size', 'pfd'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7450,7 +7450,7 @@ class EMR_PIXELFORMAT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_PIXELFORMAT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_PIXELFORMAT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7483,7 +7483,7 @@ class EMR_RESTOREDC:
     name = "EMR_RESTOREDC"
     has_variable = False
     fields = ['Type', 'Size', 'SavedDC'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7540,7 +7540,7 @@ class EMR_RESTOREDC:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_RESTOREDC {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_RESTOREDC {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7573,7 +7573,7 @@ class EMR_SCALEVIEWPORTEXTEX:
     name = "EMR_SCALEVIEWPORTEXTEX"
     has_variable = False
     fields = ['Type', 'Size', 'xNum', 'xDenom', 'yNum', 'yDenom'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7630,7 +7630,7 @@ class EMR_SCALEVIEWPORTEXTEX:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SCALEVIEWPORTEXTEX {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SCALEVIEWPORTEXTEX {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7663,7 +7663,7 @@ class EMR_SCALEWINDOWEXTEX:
     name = "EMR_SCALEWINDOWEXTEX"
     has_variable = False
     fields = ['Type', 'Size', 'xNum', 'xDenom', 'yNum', 'yDenom'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7720,7 +7720,7 @@ class EMR_SCALEWINDOWEXTEX:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SCALEWINDOWEXTEX {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SCALEWINDOWEXTEX {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7753,7 +7753,7 @@ class EMR_SETARCDIRECTION:
     name = "EMR_SETARCDIRECTION"
     has_variable = False
     fields = ['Type', 'Size', 'ArcDirection'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7810,7 +7810,7 @@ class EMR_SETARCDIRECTION:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETARCDIRECTION {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETARCDIRECTION {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7843,7 +7843,7 @@ class EMR_SETBKCOLOR:
     name = "EMR_SETBKCOLOR"
     has_variable = False
     fields = ['Type', 'Size', 'Color'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7900,7 +7900,7 @@ class EMR_SETBKCOLOR:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETBKCOLOR {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETBKCOLOR {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -7933,7 +7933,7 @@ class EMR_SETBKMODE:
     name = "EMR_SETBKMODE"
     has_variable = False
     fields = ['Type', 'Size', 'BackgroundMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -7990,7 +7990,7 @@ class EMR_SETBKMODE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETBKMODE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETBKMODE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8023,7 +8023,7 @@ class EMR_SETBRUSHORGEX:
     name = "EMR_SETBRUSHORGEX"
     has_variable = False
     fields = ['Type', 'Size', 'Origin'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8080,7 +8080,7 @@ class EMR_SETBRUSHORGEX:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETBRUSHORGEX {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETBRUSHORGEX {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8113,7 +8113,7 @@ class EMR_SETCOLORADJUSTMENT:
     name = "EMR_SETCOLORADJUSTMENT"
     has_variable = False
     fields = ['Type', 'Size', 'ColorAdjustment'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8170,7 +8170,7 @@ class EMR_SETCOLORADJUSTMENT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETCOLORADJUSTMENT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETCOLORADJUSTMENT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8203,7 +8203,7 @@ class EMR_SETICMMODE:
     name = "EMR_SETICMMODE"
     has_variable = False
     fields = ['Type', 'Size', 'ICMMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8260,7 +8260,7 @@ class EMR_SETICMMODE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETICMMODE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETICMMODE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8293,7 +8293,7 @@ class EMR_SETICMPROFILEA:
     name = "EMR_SETICMPROFILEA"
     has_variable = True
     fields = ['Type', 'Size', 'dwFlags', 'cbName', 'cbData'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8350,7 +8350,7 @@ class EMR_SETICMPROFILEA:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETICMPROFILEA {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETICMPROFILEA {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8383,7 +8383,7 @@ class EMR_SETICMPROFILEW:
     name = "EMR_SETICMPROFILEW"
     has_variable = True
     fields = ['Type', 'Size', 'dwFlags', 'cbName', 'cbData'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8440,7 +8440,7 @@ class EMR_SETICMPROFILEW:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETICMPROFILEW {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETICMPROFILEW {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8473,7 +8473,7 @@ class EMR_SETLAYOUT:
     name = "EMR_SETLAYOUT"
     has_variable = False
     fields = ['Type', 'Size', 'LayoutMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8530,7 +8530,7 @@ class EMR_SETLAYOUT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETLAYOUT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETLAYOUT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8563,7 +8563,7 @@ class EMR_SETLINKEDUFIS:
     name = "EMR_SETLINKEDUFIS"
     has_variable = True
     fields = ['Type', 'Size', 'uNumLinkedUFI', 'Reserved'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8620,7 +8620,7 @@ class EMR_SETLINKEDUFIS:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETLINKEDUFIS {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETLINKEDUFIS {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8653,7 +8653,7 @@ class EMR_SETMAPMODE:
     name = "EMR_SETMAPMODE"
     has_variable = False
     fields = ['Type', 'Size', 'MapMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8710,7 +8710,7 @@ class EMR_SETMAPMODE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETMAPMODE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETMAPMODE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8743,7 +8743,7 @@ class EMR_SETMAPPERFLAGS:
     name = "EMR_SETMAPPERFLAGS"
     has_variable = False
     fields = ['Type', 'Size', 'Flags'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8800,7 +8800,7 @@ class EMR_SETMAPPERFLAGS:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETMAPPERFLAGS {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETMAPPERFLAGS {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8833,7 +8833,7 @@ class EMR_SETMITERLIMIT:
     name = "EMR_SETMITERLIMIT"
     has_variable = False
     fields = ['Type', 'Size', 'MiterLimit'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8890,7 +8890,7 @@ class EMR_SETMITERLIMIT:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETMITERLIMIT {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETMITERLIMIT {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -8923,7 +8923,7 @@ class EMR_SETPOLYFILLMODE:
     name = "EMR_SETPOLYFILLMODE"
     has_variable = False
     fields = ['Type', 'Size', 'PolygonFillMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -8980,7 +8980,7 @@ class EMR_SETPOLYFILLMODE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETPOLYFILLMODE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETPOLYFILLMODE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9013,7 +9013,7 @@ class EMR_SETROP2:
     name = "EMR_SETROP2"
     has_variable = False
     fields = ['Type', 'Size', 'ROP2Mode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9070,7 +9070,7 @@ class EMR_SETROP2:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETROP2 {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETROP2 {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9103,7 +9103,7 @@ class EMR_SETSTRETCHBLTMODE:
     name = "EMR_SETSTRETCHBLTMODE"
     has_variable = False
     fields = ['Type', 'Size', 'StretchMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9160,7 +9160,7 @@ class EMR_SETSTRETCHBLTMODE:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETSTRETCHBLTMODE {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETSTRETCHBLTMODE {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9193,7 +9193,7 @@ class EMR_SETTEXTALIGN:
     name = "EMR_SETTEXTALIGN"
     has_variable = False
     fields = ['Type', 'Size', 'TextAlignmentMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9250,7 +9250,7 @@ class EMR_SETTEXTALIGN:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETTEXTALIGN {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETTEXTALIGN {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9283,7 +9283,7 @@ class EMR_SETTEXTCOLOR:
     name = "EMR_SETTEXTCOLOR"
     has_variable = False
     fields = ['Type', 'Size', 'Color'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9340,7 +9340,7 @@ class EMR_SETTEXTCOLOR:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETTEXTCOLOR {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETTEXTCOLOR {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9373,7 +9373,7 @@ class EMR_SETTEXTJUSTIFICATION:
     name = "EMR_SETTEXTJUSTIFICATION"
     has_variable = False
     fields = ['Type', 'Size', 'nBreakExtra', 'nBreakCount'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9430,7 +9430,7 @@ class EMR_SETTEXTJUSTIFICATION:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETTEXTJUSTIFICATION {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETTEXTJUSTIFICATION {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9463,7 +9463,7 @@ class EMR_SETVIEWPORTEXTEX:
     name = "EMR_SETVIEWPORTEXTEX"
     has_variable = False
     fields = ['Type', 'Size', 'Extent'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9520,7 +9520,7 @@ class EMR_SETVIEWPORTEXTEX:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETVIEWPORTEXTEX {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETVIEWPORTEXTEX {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9553,7 +9553,7 @@ class EMR_SETVIEWPORTORGEX:
     name = "EMR_SETVIEWPORTORGEX"
     has_variable = False
     fields = ['Type', 'Size', 'Origin'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9610,7 +9610,7 @@ class EMR_SETVIEWPORTORGEX:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETVIEWPORTORGEX {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETVIEWPORTORGEX {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9643,7 +9643,7 @@ class EMR_SETWINDOWEXTEX:
     name = "EMR_SETWINDOWEXTEX"
     has_variable = False
     fields = ['Type', 'Size', 'Extent'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9700,7 +9700,7 @@ class EMR_SETWINDOWEXTEX:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETWINDOWEXTEX {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETWINDOWEXTEX {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9733,7 +9733,7 @@ class EMR_SETWINDOWORGEX:
     name = "EMR_SETWINDOWORGEX"
     has_variable = False
     fields = ['Type', 'Size', 'Origin'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9790,7 +9790,7 @@ class EMR_SETWINDOWORGEX:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETWINDOWORGEX {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETWINDOWORGEX {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9823,7 +9823,7 @@ class EMR_MODIFYWORLDTRANSFORM:
     name = "EMR_MODIFYWORLDTRANSFORM"
     has_variable = False
     fields = ['Type', 'Size', 'Xform', 'ModifyWorldTransformMode'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9880,7 +9880,7 @@ class EMR_MODIFYWORLDTRANSFORM:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_MODIFYWORLDTRANSFORM {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_MODIFYWORLDTRANSFORM {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output
@@ -9913,7 +9913,7 @@ class EMR_SETWORLDTRANSFORM:
     name = "EMR_SETWORLDTRANSFORM"
     has_variable = False
     fields = ['Type', 'Size', 'Xform'] # These are the fields of this object.
-    variable_data = None
+    variable_data = b""
     def __init__(self, data):
         unpacked = []
         for f in self.format:
@@ -9970,7 +9970,7 @@ class EMR_SETWORLDTRANSFORM:
 
     def __repr__(self):
         parsed_fields = {field: getattr(self, field) for field in self.fields}
-        return f"<EMR_SETWORLDTRANSFORM {parsed_fields}, Remaining: {len(self.remaining_data)} bytes>"
+        return f"<EMR_SETWORLDTRANSFORM {parsed_fields}, Remaining: {len(self.variable_data)} bytes>"
 
     def serialize(self):
         out = b"" # Initialize empty bytes output

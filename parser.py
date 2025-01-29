@@ -96,6 +96,34 @@ def test_parser(): # Parse a known EMF file...
 	print("[+] Passed parse test!")
 	return
 
+TEST = False
+
+
+def parse_file(filename):
+	# Tries to parse the file...
+	fh = open(filename, "rb")
+	data = fh.read()
+	fh.close()
+	# Now just call the parsing function...
+	emf_obj = parse_emf_file(data)
+	ser_bytes = emf_obj.serialize()
+	# Show the stuff:
+
+	print("Here are the records: "+str(emf_obj.records))
+	
+	return
+
+import sys
+
 if __name__=="__main__":
-	test_parser()
+	if TEST:
+		test_parser()
+	else:
+		if len(sys.argv) != 2:
+			print("Usage: "+str(sys.argv[0])+" INPUT_EMF_FILE")
+			exit(1)
+		else:
+			fname = sys.argv[1]
+			print("Parsing...")
+			parse_file(fname) # Try to parse the file...
 	exit(0)
